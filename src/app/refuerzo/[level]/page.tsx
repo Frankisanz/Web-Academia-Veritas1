@@ -3,6 +3,10 @@ import Link from "next/link";
 import { GraduationCap, CheckCircle2, Book, Calculator, Atom, Globe, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+export function generateStaticParams() {
+  return [{ level: '1' }, { level: '2' }, { level: '3' }];
+}
+
 // Mapeo detallado de materias por nivel
 const subjectData: Record<string, { title: string, subjects: string[], desc: string }> = {
   primaria: {

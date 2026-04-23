@@ -3,6 +3,10 @@ import Link from "next/link";
 import { BookOpen, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+export function generateStaticParams() {
+  return [{ level: '1' }, { level: '2' }, { level: '3' }];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ level: string }> }): Promise<Metadata> {
   const { level } = await params;
   return {
