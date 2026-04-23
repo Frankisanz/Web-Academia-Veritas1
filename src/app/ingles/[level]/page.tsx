@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 export function generateStaticParams() {
   return [{ level: '1' }, { level: '2' }, { level: '3' }];
 }
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string }> }): Promise<Metadata> {
   const { level } = await params;

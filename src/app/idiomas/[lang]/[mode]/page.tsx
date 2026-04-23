@@ -3,6 +3,18 @@ import Link from "next/link";
 import { Languages, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+export function generateStaticParams() {
+  return [
+    { lang: 'frances', mode: 'presencial' },
+    { lang: 'frances', mode: 'online' },
+    { lang: 'aleman', mode: 'presencial' },
+    { lang: 'aleman', mode: 'online' },
+    { lang: 'italiano', mode: 'presencial' },
+    { lang: 'italiano', mode: 'online' },
+  ];
+}
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string, mode: string }> }): Promise<Metadata> {
   const { lang, mode } = await params;
   return {
