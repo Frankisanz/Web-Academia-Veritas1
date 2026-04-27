@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ level: st
   const { level } = await params;
   return {
     title: `Clases de Inglés de ${level.replace('-', ' ')} | Academia Veritas`,
-    description: `Apúntate a nuestras clases de inglés de ${level.replace('-', ' ')} en Úbeda. Metodología nativa y resultados garantizados.`,
+    description: `Apúntate a nuestras clases de inglés de ${level.replace('-', ' ')} en Úbeda. Metodología práctica y resultados garantizados.`,
   };
 }
 
@@ -36,7 +36,7 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
             Inglés para {levelName}
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-             Desarrolla tus habilidades en el idioma con profesores nativos y un plan de estudios adaptado para tu nivel y objetivos. Grupos reducidos para maximizar la participación.
+             Desarrolla tus habilidades en el idioma con profesores expertos y un plan de estudios adaptado para tu nivel y objetivos. Grupos reducidos para maximizar la participación.
           </p>
         </div>
 

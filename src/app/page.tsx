@@ -56,7 +56,7 @@ export default function Home() {
               </h1>
               
               <p className="text-lg text-slate-700 dark:text-slate-300 font-medium mb-8 leading-relaxed max-w-xl">
-                Academia Veritas en Úbeda. Aprende inglés, domina otras lenguas y supera tus retos escolares con profesores expertos y un método comprobado.
+                Academia Veritas en Úbeda. Supera tus retos escolares en Primaria, Secundaria y Bachillerato, aprende inglés y domina otras lenguas con profesores expertos y un método comprobado.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -72,7 +72,7 @@ export default function Home() {
 
               <div className="mt-10 flex items-center gap-6 text-sm font-semibold text-slate-800 dark:text-slate-200">
                 <div className="flex items-center gap-2 bg-white/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/50 shadow-sm">
-                  <CheckCircle2 className="h-5 w-5 text-primary-600" /> Profesores Nativos
+                  <CheckCircle2 className="h-5 w-5 text-primary-600" /> Profesores Especializados
                 </div>
                 <div className="flex items-center gap-2 bg-white/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/50 shadow-sm">
                   <CheckCircle2 className="h-5 w-5 text-primary-600" /> Grupos Reducidos
@@ -167,17 +167,17 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <ServiceCard 
-              icon={<BookOpen className="h-8 w-8 text-primary-600" />}
-              title="Inglés"
-              desc="Primaria, Secundaria, Bachillerato y Preparación de Exámenes Cambridge / Aptis."
-              href="/ingles/secundaria"
-            />
              <ServiceCard 
               icon={<GraduationCap className="h-8 w-8 text-primary-600" />}
               title="Apoyo Escolar"
-              desc="Refuerzo en todas las asignaturas y preparación intensiva para la prueba de Selectividad."
+              desc="Refuerzo escolar para Primaria, Secundaria y Bachillerato, y preparación intensiva para Selectividad."
               href="/refuerzo/secundaria"
+            />
+            <ServiceCard 
+              icon={<BookOpen className="h-8 w-8 text-primary-600" />}
+              title="Inglés"
+              desc="Preparación de Exámenes Cambridge / Aptis y refuerzo para todos los niveles."
+              href="/ingles/secundaria"
             />
              <ServiceCard 
               icon={<Languages className="h-8 w-8 text-primary-600" />}

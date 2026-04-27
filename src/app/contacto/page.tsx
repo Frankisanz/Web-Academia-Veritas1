@@ -43,7 +43,7 @@ export default function ContactoPage() {
             <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-zinc-800">
               <Mail className="h-8 w-8 text-primary-600 mb-4" />
               <h3 className="font-bold text-xl mb-2 text-foreground">Escríbenos</h3>
-              <p className="text-muted-foreground">info@academiaveritas.es</p>
+              <p className="text-muted-foreground">soniahg41@gmail.com</p>
             </div>
           </div>
 

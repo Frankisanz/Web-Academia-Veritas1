@@ -45,12 +45,6 @@ export function Navbar() {
               </span>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-primary-100 dark:border-zinc-800 p-3 flex flex-col min-w-[240px]">
-                  <Link href="/ingles/secundaria" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
-                    <BookOpen className="h-5 w-5 text-primary-500" />
-                    <span className="text-foreground font-medium">Inglés (Todos los niveles)</span>
-                  </Link>
-                  
-                  <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
                   <span className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider">Apoyo Escolar</span>
                   
                   <Link href="/refuerzo/primaria" className="px-4 py-2 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
@@ -66,6 +60,13 @@ export function Navbar() {
                     <span className="text-foreground text-sm">Bachillerato & Selectividad</span>
                   </Link>
 
+                  <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
+                  
+                  <Link href="/ingles/secundaria" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
+                    <BookOpen className="h-5 w-5 text-primary-500" />
+                    <span className="text-foreground font-medium">Inglés (Todos los niveles)</span>
+                  </Link>
+                  
                   <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
                   
                   <Link href="/idiomas/espanol/online" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
@@ -108,9 +109,6 @@ export function Navbar() {
           <div className="px-4 py-2 font-semibold text-primary-600 uppercase text-sm tracking-wider">
             Servicios
           </div>
-          <Link href="/ingles/secundaria" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
-            <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)
-          </Link>
           <div className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider mt-2">Apoyo Escolar</div>
           <Link href="/refuerzo/primaria" className="font-medium px-4 py-2 ml-4 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             <span className="w-1.5 h-1.5 rounded-full bg-primary-400" /> Primaria
@@ -120,6 +118,9 @@ export function Navbar() {
           </Link>
           <Link href="/refuerzo/bachillerato" className="font-medium px-4 py-2 ml-4 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             <span className="w-1.5 h-1.5 rounded-full bg-primary-400" /> Bachillerato
+          </Link>
+          <Link href="/ingles/secundaria" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground mt-2" onClick={() => setIsMobileMenuOpen(false)}>
+            <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)
           </Link>
           <div className="h-px bg-slate-100 dark:bg-zinc-800 my-1" />
           <Link href="/idiomas/espanol/online" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>

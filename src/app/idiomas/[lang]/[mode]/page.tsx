@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   
   return {
     title: `Clases de ${displayLang} ${mode.replace('-', ' ')} | Academia Veritas`,
-    description: `Aprende ${displayLang} en modalidad ${mode.replace('-', ' ')} con nuestros profesores nativos en Academia Veritas.`,
+    description: `Aprende ${displayLang} en modalidad ${mode.replace('-', ' ')} con nuestros profesores expertos en Academia Veritas.`,
   };
 }
 

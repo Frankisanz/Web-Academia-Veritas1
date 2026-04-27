@@ -5,7 +5,7 @@ export function LocalBusinessSchema() {
     "name": "Academia Veritas",
     "image": "https://academiaveritas.es/logo.png",
     "telephone": "626819636",
-    "email": "info@academiaveritas.es",
+    "email": "soniahg41@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Calle Torrenueva Nº 1, 1º",
