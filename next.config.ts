@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/AcademiaSoniaHigueras',
+  basePath: '/Web-Academia-Veritas1',
   images: {
     unoptimized: true,
   },
