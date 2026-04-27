@@ -4,7 +4,12 @@ import { BookOpen, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function generateStaticParams() {
-  return [{ level: '1' }, { level: '2' }, { level: '3' }];
+  return [
+    { level: 'primaria' },
+    { level: 'secundaria' },
+    { level: 'bachillerato' },
+    { level: 'adultos' }
+  ];
 }
 export const dynamicParams = false;
 

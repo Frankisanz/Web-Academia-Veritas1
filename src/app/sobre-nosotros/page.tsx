@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { BadgeCheck, Users, Trophy } from "lucide-react";
+import { Users, Trophy } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros | Academia Veritas",

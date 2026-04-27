@@ -1,10 +1,15 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { GraduationCap, CheckCircle2, Book, Calculator, Atom, Globe, Lightbulb } from "lucide-react";
+import { GraduationCap, CheckCircle2, Book } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function generateStaticParams() {
-  return [{ level: '1' }, { level: '2' }, { level: '3' }];
+  return [
+    { level: 'primaria' }, 
+    { level: 'secundaria' }, 
+    { level: 'bachillerato' },
+    { level: 'preparacion-selectividad' }
+  ];
 }
 export const dynamicParams = false;
 
@@ -34,9 +39,12 @@ const subjectData: Record<string, { title: string, subjects: string[], desc: str
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string }> }): Promise<Metadata> {
   const { level } = await params;
+  const displayLevel = level === 'preparacion-selectividad' ? 'Preparación Selectividad' : 
+                      level.charAt(0).toUpperCase() + level.slice(1).replace('-', ' ');
+  
   return {
-    title: `Apoyo Escolar de ${level.replace('-', ' ')} | Academia Veritas`,
-    description: `Clases de apoyo escolar y refuerzo para estudiantes de ${level.replace('-', ' ')} en Úbeda. Conoce nuestro método para aprobar todas las asignaturas.`,
+    title: `Apoyo Escolar de ${displayLevel} | Academia Veritas`,
+    description: `Clases de apoyo escolar y refuerzo para estudiantes de ${displayLevel} en Úbeda. Conoce nuestro método para aprobar todas las asignaturas.`,
   };
 }
 

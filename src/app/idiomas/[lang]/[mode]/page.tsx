@@ -11,21 +11,36 @@ export function generateStaticParams() {
     { lang: 'aleman', mode: 'online' },
     { lang: 'italiano', mode: 'presencial' },
     { lang: 'italiano', mode: 'online' },
+    { lang: 'espanol', mode: 'presencial' },
+    { lang: 'espanol', mode: 'online' },
   ];
 }
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string, mode: string }> }): Promise<Metadata> {
   const { lang, mode } = await params;
+  const displayLang = lang === 'espanol' ? 'Español' : 
+                     lang === 'frances' ? 'Francés' : 
+                     lang === 'aleman' ? 'Alemán' : 
+                     lang.charAt(0).toUpperCase() + lang.slice(1);
+  
   return {
-    title: `Clases de ${lang.replace('-', ' ')} ${mode.replace('-', ' ')} | Academia Veritas`,
-    description: `Aprende ${lang.replace('-', ' ')} en modalidad ${mode.replace('-', ' ')} con nuestros profesores nativos en Academia Veritas.`,
+    title: `Clases de ${displayLang} ${mode.replace('-', ' ')} | Academia Veritas`,
+    description: `Aprende ${displayLang} en modalidad ${mode.replace('-', ' ')} con nuestros profesores nativos en Academia Veritas.`,
   };
 }
 
 export default async function IdiomasPage({ params }: { params: Promise<{ lang: string, mode: string }> }) {
   const { lang, mode } = await params;
-  const langName = lang.charAt(0).toUpperCase() + lang.slice(1).replace('-', ' ');
+  
+  const langMap: Record<string, string> = {
+    frances: "Francés",
+    aleman: "Alemán",
+    italiano: "Italiano",
+    espanol: "Español"
+  };
+  
+  const langName = langMap[lang] || (lang.charAt(0).toUpperCase() + lang.slice(1).replace('-', ' '));
   const modeName = mode.charAt(0).toUpperCase() + mode.slice(1).replace('-', ' ');
 
   return (
