@@ -26,3 +26,39 @@ export function LocalBusinessSchema() {
     />
   );
 }
+
+export function FAQSchema() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "¿En qué asignaturas ofrecéis apoyo escolar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos clases particulares de todas las materias principales: Matemáticas, Lengua Castellana, Física y Química, Biología, Historia e Inglés, abarcando desde Educación Primaria hasta Bachillerato y Selectividad."
+            }
+          }, {
+            "@type": "Question",
+            "name": "¿Cómo preparamos la Selectividad (PEvAU) en la academia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nuestro programa intensivo se centra en la resolución de exámenes de años anteriores, simulacros cronometrados y resolución de dudas específicas. Los profesores expertos te guían para maximizar tu nota de corte."
+            }
+          }, {
+            "@type": "Question",
+            "name": "¿Dónde está ubicada Academia Veritas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nuestra academia de apoyo escolar se encuentra en Úbeda (Jaén), en la Calle Torrenueva Nº 1, 1º. Un lugar céntrico y de fácil acceso para todos los estudiantes de la zona."
+            }
+          }]
+        })
+      }}
+    />
+  );
+}

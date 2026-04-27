@@ -67,12 +67,7 @@ export function Navbar() {
                     <span className="text-foreground font-medium">Inglés (Todos los niveles)</span>
                   </Link>
                   
-                  <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
-                  
-                  <Link href="/idiomas/espanol/online" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
-                    <Languages className="h-5 w-5 text-primary-500" />
-                    <span className="text-foreground font-medium">Otros Idiomas</span>
-                  </Link>
+
                 </div>
               </div>
             </div>
@@ -122,10 +117,7 @@ export function Navbar() {
           <Link href="/ingles/secundaria" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground mt-2" onClick={() => setIsMobileMenuOpen(false)}>
             <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)
           </Link>
-          <div className="h-px bg-slate-100 dark:bg-zinc-800 my-1" />
-          <Link href="/idiomas/espanol/online" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
-            <Languages className="h-5 w-5" /> Otros Idiomas
-          </Link>
+
           <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl mt-4 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             Contacto
           </Link>

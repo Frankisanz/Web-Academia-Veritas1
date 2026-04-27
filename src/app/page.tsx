@@ -128,7 +128,6 @@ export default function Home() {
                       <option value="" disabled>Selecciona una opción</option>
                       <option value="ingles">Clases de Inglés</option>
                       <option value="refuerzo">Apoyo Escolar / Selectividad</option>
-                      <option value="idiomas">Otros Idiomas</option>
                     </select>
                   </div>
                   <Button type="submit" size="lg" className="w-full h-14 mt-2 text-base">
@@ -176,15 +175,79 @@ export default function Home() {
             <ServiceCard 
               icon={<BookOpen className="h-8 w-8 text-primary-600" />}
               title="Inglés"
-              desc="Preparación de Exámenes Cambridge / Aptis y refuerzo para todos los niveles."
+              desc="Preparación a selectividad y refuerzo para todos los niveles hasta bachillerato."
               href="/ingles/secundaria"
             />
-             <ServiceCard 
-              icon={<Languages className="h-8 w-8 text-primary-600" />}
-              title="Otros Idiomas"
-              desc="Clases de Español para extranjeros y preparación específica."
-              href="/idiomas/espanol/online"
-            />
+          </div>
+        </div>
+      </section>
+
+      {/* Método Veritas Section */}
+      <section className="py-24 bg-primary-50 dark:bg-zinc-950 relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+              El Método Veritas para Apoyo Escolar en Úbeda
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Sabemos que cada estudiante es único. Por eso, nuestras clases particulares de Primaria, Secundaria y Bachillerato se adaptan a las necesidades individuales para garantizar el aprobado y el aprendizaje real.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
+              <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Atención Personalizada</h3>
+              <p className="text-muted-foreground text-sm">Grupos muy reducidos para asegurar que resolvemos las dudas específicas de cada alumno al instante.</p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
+              <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Técnicas de Estudio</h3>
+              <p className="text-muted-foreground text-sm">No solo enseñamos la materia, enseñamos a estudiar. Organización, resúmenes y esquemas efectivos.</p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
+              <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Simulacros de Examen</h3>
+              <p className="text-muted-foreground text-sm">Pruebas continuas, especialmente en Bachillerato y preparación de Selectividad (PEvAU), para perder el miedo al examen.</p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
+              <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">4</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Contacto con Padres</h3>
+              <p className="text-muted-foreground text-sm">Mantenemos una comunicación fluida con las familias para informar del progreso y áreas de mejora.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-white dark:bg-black">
+        <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+              Preguntas Frecuentes sobre nuestras Clases en Úbeda
+            </h2>
+            <p className="text-lg text-muted-foreground">Resolvemos las dudas más comunes de nuestros alumnos y sus familias.</p>
+          </div>
+          <div className="space-y-6">
+            <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
+              <h3 className="text-lg font-bold text-foreground mb-2">¿En qué asignaturas ofrecéis apoyo escolar?</h3>
+              <p className="text-muted-foreground">Ofrecemos clases particulares de todas las materias principales: Matemáticas, Lengua Castellana, Física y Química, Biología, Historia e Inglés, abarcando desde Educación Primaria hasta Bachillerato y Selectividad.</p>
+            </div>
+            <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
+              <h3 className="text-lg font-bold text-foreground mb-2">¿Cómo preparamos la Selectividad (PEvAU) en la academia?</h3>
+              <p className="text-muted-foreground">Nuestro programa intensivo se centra en la resolución de exámenes de años anteriores, simulacros cronometrados y resolución de dudas específicas. Los profesores expertos te guían para maximizar tu nota de corte.</p>
+            </div>
+            <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
+              <h3 className="text-lg font-bold text-foreground mb-2">¿Dónde está ubicada Academia Veritas?</h3>
+              <p className="text-muted-foreground">Nuestra academia de apoyo escolar e idiomas se encuentra en Úbeda (Jaén), en la Calle Torrenueva Nº 1, 1º. Un lugar céntrico y de fácil acceso para todos los estudiantes de la zona.</p>
+            </div>
           </div>
         </div>
       </section>

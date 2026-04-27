@@ -57,7 +57,7 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary-600 shrink-0" />
-                  <span className="text-foreground">Preparación específica si deseas presentarte a certificaciones.</span>
+                  <span className="text-foreground">Preparación orientada a superar la Selectividad (PEvAU) y mejorar tus calificaciones en el instituto.</span>
                 </li>
              </ul>
              
