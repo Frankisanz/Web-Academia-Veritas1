@@ -62,6 +62,16 @@ export function Navbar() {
 
                   <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
                   
+                  <Link href="/contacto" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center justify-between gap-3 group/item">
+                    <div className="flex items-center gap-3">
+                      <GraduationCap className="h-5 w-5 text-primary-500" />
+                      <span className="text-foreground font-medium">Intensivo de Selectividad</span>
+                    </div>
+                    <span className="bg-primary-100 text-primary-700 text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse shadow-sm">¡NUEVO!</span>
+                  </Link>
+
+                  <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
+                  
                   <Link href="/ingles/secundaria" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
                     <BookOpen className="h-5 w-5 text-primary-500" />
                     <span className="text-foreground font-medium">Inglés (Todos los niveles)</span>
@@ -113,6 +123,12 @@ export function Navbar() {
           </Link>
           <Link href="/refuerzo/bachillerato" className="font-medium px-4 py-2 ml-4 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             <span className="w-1.5 h-1.5 rounded-full bg-primary-400" /> Bachillerato
+          </Link>
+          <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center justify-between gap-3 text-foreground mt-2" onClick={() => setIsMobileMenuOpen(false)}>
+            <div className="flex items-center gap-3">
+              <GraduationCap className="h-5 w-5" /> Intensivo de Selectividad
+            </div>
+            <span className="bg-primary-100 text-primary-700 text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse">¡NUEVO!</span>
           </Link>
           <Link href="/ingles/secundaria" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground mt-2" onClick={() => setIsMobileMenuOpen(false)}>
             <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)

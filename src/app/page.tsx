@@ -194,10 +194,11 @@ export default function Home() {
             />
             <ServiceCard 
               icon={<Languages className="h-8 w-8 text-primary-600" />}
-              title="Selectividad Intensivo"
+              title="Intensivo Selectividad"
               desc="Preparación intensiva para Selectividad (PEvAU) en las materias de Lengua e Inglés."
               href="/contacto"
               ctaText="Infórmate"
+              badge="¡Nuevo!"
             />
             <ServiceCard 
               icon={<CheckCircle2 className="h-8 w-8 text-primary-600" />}
@@ -290,9 +291,14 @@ export default function Home() {
   );
 }
 
-function ServiceCard({ icon, title, desc, href, ctaText = "Saber más" }: { icon: React.ReactNode, title: string, desc: string, href: string, ctaText?: string }) {
+function ServiceCard({ icon, title, desc, href, ctaText = "Saber más", badge }: { icon: React.ReactNode, title: string, desc: string, href: string, ctaText?: string, badge?: string }) {
   return (
-    <Link href={href} className="group flex flex-col items-start bg-primary-50/50 dark:bg-zinc-900/50 p-8 rounded-3xl border border-primary-100 dark:border-zinc-800 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1">
+    <Link href={href} className="group flex flex-col items-start bg-primary-50/50 dark:bg-zinc-900/50 p-8 rounded-3xl border border-primary-100 dark:border-zinc-800 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1 relative">
+      {badge && (
+        <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm animate-pulse">
+          {badge}
+        </span>
+      )}
       <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
