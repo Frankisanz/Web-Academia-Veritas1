@@ -14,26 +14,30 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 // Mapeo detallado de materias por nivel
-const subjectData: Record<string, { title: string, subjects: string[], desc: string }> = {
+const subjectData: Record<string, { title: string, subjects: string[], desc: string, images: string[] }> = {
   primaria: {
     title: "Apoyo en Primaria",
     desc: "¡El momento perfecto para despertar su curiosidad! En Primaria nos volcamos en asentar bases sólidas y crear hábitos de estudio divertidos que les acompañarán toda la vida. Observa cómo mejoran sus notas mientras ganan confianza en sí mismos.",
-    subjects: ["Lengua Castellana y Literatura", "Matemáticas", "Ciencias Naturales", "Ciencias Sociales", "Inglés"]
+    subjects: ["Lengua Castellana y Literatura", "Matemáticas", "Ciencias Naturales", "Ciencias Sociales", "Inglés"],
+    images: ["primaria.jpg.jpg", "primaria.jpg.jpg"]
   },
   secundaria: {
     title: "Apoyo en la ESO (Secundaria)",
     desc: "Una etapa de grandes retos que transformamos en grandes victorias. Te ofrecemos un acompañamiento integral con profesores expertos para que cualquier asignatura se convierta en tu punto fuerte. ¡Es hora de que Secundaria sea un paseo triunfal!",
-    subjects: ["Matemáticas", "Lengua Castellana y Literatura", "Física y Química", "Biología y Geología", "Geografía e Historia", "Inglés", "Tecnología"]
+    subjects: ["Matemáticas", "Lengua Castellana y Literatura", "Física y Química", "Biología y Geología", "Geografía e Historia", "Inglés", "Tecnología"],
+    images: ["secundaria.jpg.jpg", "secundaria2.jpg.jpg"]
   },
   bachillerato: {
     title: "Apoyo en Bachillerato",
     desc: "¡Tu futuro brillante empieza aquí! Sabemos lo decisiva que es esta etapa. Te prepararemos estratégicamente en Primero y Segundo de Bachillerato para asegurar unas calificaciones extraordinarias que te abran las puertas de la Universidad de tus sueños.",
-    subjects: ["Preparación a Selectividad", "Lengua y Literatura", "Historia de España", "Inglés"]
+    subjects: ["Preparación a Selectividad", "Lengua y Literatura", "Historia de España", "Inglés"],
+    images: ["bachiller.jpg", "bachiller2.jpg.jpg"]
   },
   "preparacion-selectividad": {
     title: "Preparación Selectividad (PEvAU)",
     desc: "Planteamos un intensivo enfocado totalmente a superar la PEvAU con los temarios oficiales, simulacros de examen y resolución de dudas cronometradas. ¡Tu plaza en la facultad está asegurada!",
-    subjects: ["Todas las materias generales", "Específicas de Ciencias", "Específicas de Humanidades / Sociales"]
+    subjects: ["Todas las materias generales", "Específicas de Ciencias", "Específicas de Humanidades / Sociales"],
+    images: ["bachiller.jpg", "bachiller2.jpg.jpg"]
   }
 };
 
@@ -54,7 +58,8 @@ export default async function RefuerzoPage({ params }: { params: Promise<{ level
   const info = subjectData[level] || {
     title: `Apoyo Escolar para ${level.charAt(0).toUpperCase() + level.slice(1).replace('-', ' ')}`,
     desc: "Ayudamos a nuestros alumnos a superar las dificultades en las materias más exigentes. Evaluamos sus necesidades, ofrecemos técnicas de estudio eficaces y garantizamos acompañamiento personalizado.",
-    subjects: ["Refuerzo general de asignaturas", "Técnicas de estudio", "Acompañamiento personalizado"]
+    subjects: ["Refuerzo general de asignaturas", "Técnicas de estudio", "Acompañamiento personalizado"],
+    images: ["secundaria.jpg.jpg", "secundaria2.jpg.jpg"]
   };
 
   return (
@@ -98,8 +103,12 @@ export default async function RefuerzoPage({ params }: { params: Promise<{ level
              </div>
           </div>
           <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl order-1 md:order-2">
-             <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1470" alt={info.title} className="w-full h-full object-cover" />
+             <img src={`../../${info.images[0]}`} alt={info.title} className="w-full h-full object-cover" />
           </div>
+        </div>
+
+        <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl mb-24 hidden md:block">
+           <img src={`../../${info.images[1]}`} alt={`${info.title} - Segunda imagen`} className="w-full h-full object-cover" />
         </div>
 
         {/* Sección Específica de Materias */}
