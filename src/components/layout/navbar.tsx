@@ -90,8 +90,8 @@ export function Navbar() {
           </nav>
 
           <div className="hidden md:block">
-            <Button size="lg" className="rounded-full">
-              Reserva tu clase
+            <Button size="lg" className="rounded-full" asChild>
+              <Link href="/#contacto">Reserva tu clase</Link>
             </Button>
           </div>
 
@@ -137,8 +137,10 @@ export function Navbar() {
           <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl mt-4 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             Contacto
           </Link>
-          <Button className="w-full mt-4" size="lg">
-            Reserva tu clase
+          <Button className="w-full mt-4" size="lg" asChild>
+            <Link href="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>
+              Reserva tu clase
+            </Link>
           </Button>
         </div>
       )}
