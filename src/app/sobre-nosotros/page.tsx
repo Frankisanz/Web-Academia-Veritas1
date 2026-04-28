@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Trophy, GraduationCap, Award, BookOpen } from "lucide-react";
+import { Trophy, GraduationCap, Award, BookOpen, Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Conoce a Sonia Higueras | Profesora en Úbeda | Academia Veritas",
@@ -12,7 +12,7 @@ export default function SobreNosotrosPage() {
     "@type": "Person",
     "name": "Sonia Higueras García",
     "jobTitle": "Directora Académica y Profesora",
-    "description": "Profesional, inteligente, disciplinada y plenamente implicada en el rendimiento y éxito de sus alumnos. Graduada en Geografía e Historia.",
+    "description": "Profesional, inteligente, disciplinada y plenamente implicada en el rendimiento y éxito de sus alumnos. Años de experiencia en clases particulares y apoyo escolar multidisciplinar en Úbeda. Graduada en Geografía e Historia.",
     "image": "https://frankisanz.github.io/Web-Academia-Veritas1/sonia-higueras.jpg",
     "affiliation": {
       "@type": "EducationalOrganization",
@@ -51,6 +51,16 @@ export default function SobreNosotrosPage() {
               </p>
 
               <div className="space-y-6">
+                <div className="flex items-start gap-4 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
+                  <div className="bg-primary-50 dark:bg-primary-900/30 p-3 rounded-xl mt-1">
+                    <Star className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-foreground">Amplia Experiencia Docente</h3>
+                    <p className="text-muted-foreground text-sm mt-1">Años de experiencia impartiendo <strong>clases particulares de apoyo escolar en Úbeda</strong> en diversas disciplinas (Humanidades, Ciencias e Idiomas), garantizando un enfoque adaptado a las necesidades de cada nivel educativo.</p>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-4 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
                   <div className="bg-primary-50 dark:bg-primary-900/30 p-3 rounded-xl mt-1">
                     <BookOpen className="h-6 w-6 text-primary-600 dark:text-primary-400" />
