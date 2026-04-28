@@ -44,10 +44,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl relative z-10"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-md border border-primary-100 mb-8 mt-8">
-                <span className="flex h-2 w-2 rounded-full bg-primary-500 animate-pulse" />
-                <span className="text-sm font-medium text-primary-900">Matrícula Abierta 2024-2025</span>
-              </div>
+
               
               <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
                 Desata tu <br/>
