@@ -44,7 +44,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/ingles/secundaria" className="text-primary-200/80 hover:text-white transition-colors text-sm">
-                  Clases de Inglés
+                  Clases de refuerzo de inglés
                 </Link>
               </li>
               <li>
@@ -62,11 +62,7 @@ export function Footer() {
                   Bachillerato & Selectividad
                 </Link>
               </li>
-              <li>
-                <Link href="/idiomas/espanol/online" className="text-primary-200/80 hover:text-white transition-colors text-sm">
-                  Clases de Español
-                </Link>
-              </li>
+
             </ul>
           </div>
 

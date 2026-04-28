@@ -18,7 +18,7 @@ const subjectData: Record<string, { title: string, subjects: string[], desc: str
   primaria: {
     title: "Apoyo en Primaria",
     desc: "¡El momento perfecto para despertar su curiosidad! En Primaria nos volcamos en asentar bases sólidas y crear hábitos de estudio divertidos que les acompañarán toda la vida. Observa cómo mejoran sus notas mientras ganan confianza en sí mismos.",
-    subjects: ["Lengua Castellana y Literatura", "Matemáticas", "Ciencias Naturales", "Ciencias Sociales", "Inglés"],
+    subjects: ["Lengua castellana", "Matemáticas", "Ciencias Naturales", "Ciencias Sociales", "Inglés", "Francés"],
     images: ["primaria.jpg.jpg", "primaria.jpg.jpg"]
   },
   secundaria: {

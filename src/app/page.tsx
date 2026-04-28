@@ -150,6 +150,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Summer Banner */}
+      <section className="bg-gradient-to-r from-primary-600 to-primary-800 py-12 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay"></div>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
+           <span className="inline-block bg-white text-primary-700 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-4 animate-pulse shadow-lg">¡Nuevo!</span>
+           <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-4">
+             ¡Se abren plazas para Refuerzo Intensivo de Verano!
+           </h2>
+           <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8 font-medium">
+             Aprovecha el verano para ponerte al día o adelantar materia. Plazas disponibles para las distintas materias de Primaria, Secundaria y Bachillerato.
+           </p>
+           <Button size="lg" className="bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-800 shadow-xl border-none font-bold" asChild>
+             <Link href="/contacto">Reserva tu plaza ahora</Link>
+           </Button>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="servicios" className="py-24 bg-white dark:bg-black relative">
         <div className="container mx-auto px-6 lg:px-8">
@@ -162,7 +179,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
              <ServiceCard 
               icon={<GraduationCap className="h-8 w-8 text-primary-600" />}
               title="Apoyo Escolar"
@@ -174,6 +191,20 @@ export default function Home() {
               title="Inglés"
               desc="Preparación a selectividad y refuerzo para todos los niveles hasta bachillerato."
               href="/ingles/secundaria"
+            />
+            <ServiceCard 
+              icon={<Languages className="h-8 w-8 text-primary-600" />}
+              title="Selectividad Intensivo"
+              desc="Preparación intensiva para Selectividad (PEvAU) en las materias de Lengua e Inglés."
+              href="/contacto"
+              ctaText="Infórmate"
+            />
+            <ServiceCard 
+              icon={<CheckCircle2 className="h-8 w-8 text-primary-600" />}
+              title="Oferta para Hermanos"
+              desc="Aprovecha nuestros descuentos especiales si matriculas a más de un hijo en la academia."
+              href="/contacto"
+              ctaText="Infórmate aquí"
             />
           </div>
         </div>
@@ -190,7 +221,7 @@ export default function Home() {
               Sabemos que cada estudiante es único. Por eso, nuestras clases particulares de Primaria, Secundaria y Bachillerato se adaptan a las necesidades individuales para garantizar el aprobado y el aprendizaje real.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
               <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
                 <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">1</span>
@@ -218,6 +249,13 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Contacto con Padres</h3>
               <p className="text-muted-foreground text-sm">Mantenemos una comunicación fluida con las familias para informar del progreso y áreas de mejora.</p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-primary-100 dark:border-zinc-800">
+              <div className="bg-primary-100 dark:bg-primary-900/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">5</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Resolución por WhatsApp</h3>
+              <p className="text-muted-foreground text-sm">Seguimiento y atención de dudas por WhatsApp para que nuestros alumnos nunca se queden atascados estudiando desde casa.</p>
             </div>
           </div>
         </div>
@@ -252,7 +290,7 @@ export default function Home() {
   );
 }
 
-function ServiceCard({ icon, title, desc, href }: { icon: React.ReactNode, title: string, desc: string, href: string }) {
+function ServiceCard({ icon, title, desc, href, ctaText = "Saber más" }: { icon: React.ReactNode, title: string, desc: string, href: string, ctaText?: string }) {
   return (
     <Link href={href} className="group flex flex-col items-start bg-primary-50/50 dark:bg-zinc-900/50 p-8 rounded-3xl border border-primary-100 dark:border-zinc-800 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1">
       <div className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -261,7 +299,7 @@ function ServiceCard({ icon, title, desc, href }: { icon: React.ReactNode, title
       <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
       <p className="text-muted-foreground mb-8 text-sm leading-relaxed flex-1">{desc}</p>
       <div className="flex items-center text-primary-600 dark:text-primary-400 font-medium text-sm mt-auto group-hover:gap-2 transition-all">
-        Saber más <ArrowRight className="ml-1 h-4 w-4" />
+        {ctaText} <ArrowRight className="ml-1 h-4 w-4" />
       </div>
     </Link>
   );

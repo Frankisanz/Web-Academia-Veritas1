@@ -44,7 +44,7 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
             Inglés para {levelName}
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-             Desarrolla tus habilidades en el idioma con profesores expertos y un plan de estudios adaptado para tu nivel y objetivos. Grupos reducidos para maximizar la participación.
+             Da un salto de gigante en tus notas de inglés con nuestro apoyo escolar especializado. En nuestras clases, te ayudaremos a entender la gramática, dominar el vocabulario y superar los exámenes con soltura, en grupos reducidos para que no te quedes con ninguna duda.
           </p>
         </div>
 
@@ -57,15 +57,15 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
              <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary-600 shrink-0" />
-                  <span className="text-foreground">Expresión oral fluida (Speaking) enfocada en situaciones reales.</span>
+                  <span className="text-foreground">Comprensión total de la gramática y refuerzo constante del temario de tu instituto o colegio.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary-600 shrink-0" />
-                  <span className="text-foreground">Comprensión escrita y vocabulario adaptado al nivel de {levelName}.</span>
+                  <span className="text-foreground">Práctica intensiva de ejercicios, traducciones y vocabulario clave para aprobar sin problemas.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary-600 shrink-0" />
-                  <span className="text-foreground">Preparación orientada a superar la Selectividad (PEvAU) y mejorar tus calificaciones en el instituto.</span>
+                  <span className="text-foreground">Acompañamiento continuo y preparación para exámenes, desde Primaria hasta la Selectividad (PEvAU).</span>
                 </li>
              </ul>
              
