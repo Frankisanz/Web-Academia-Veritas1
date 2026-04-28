@@ -32,8 +32,8 @@ export default function SobreNosotrosPage() {
         <section className="mb-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
-              {/* Le indicaremos al usuario que guarde la foto con este nombre */}
-              <img src="/Web-Academia-Veritas1/sonia-higueras.jpg" alt="Sonia Higueras García - Profesora de Academia Veritas en Úbeda" className="w-full h-full object-cover" />
+              {/* Usamos ruta relativa para que funcione en Vercel y GitHub Pages */}
+              <img src="../sonia-higueras.jpg" alt="Sonia Higueras García - Profesora de Academia Veritas en Úbeda" className="w-full h-full object-cover" />
             </div>
             
             <div className="order-1 lg:order-2">
