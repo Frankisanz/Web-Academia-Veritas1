@@ -58,12 +58,12 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-base h-14 px-8 shadow-xl shadow-primary-500/20" asChild>
-                  <Link href="#contacto">
+                  <Link href="/#contacto">
                     Solicitar información <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="text-base h-14 px-8 border-2 border-primary-200 bg-white/50 backdrop-blur-md" asChild>
-                  <Link href="#servicios">Ver todos los cursos</Link>
+                  <Link href="/#servicios">Ver todos los cursos</Link>
                 </Button>
               </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
              Aprovecha el verano para ponerte al día o adelantar materia. Plazas disponibles para las distintas materias de Primaria, Secundaria y Bachillerato.
            </p>
            <Button size="lg" className="bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-800 shadow-xl border-none font-bold" asChild>
-             <Link href="/contacto">Reserva tu plaza ahora</Link>
+             <Link href="/#contacto">Reserva tu plaza ahora</Link>
            </Button>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function Home() {
               icon={<Languages className="h-8 w-8 text-primary-600" />}
               title="Intensivo Selectividad"
               desc="Preparación intensiva para Selectividad (PEvAU) en las materias de Lengua e Inglés."
-              href="/contacto"
+              href="/#contacto"
               ctaText="Infórmate"
               badge="¡Nuevo!"
             />
@@ -204,7 +204,7 @@ export default function Home() {
               icon={<CheckCircle2 className="h-8 w-8 text-primary-600" />}
               title="Oferta para Hermanos"
               desc="Aprovecha nuestros descuentos especiales si matriculas a más de un hijo en la academia."
-              href="/contacto"
+              href="/#contacto"
               ctaText="Infórmate aquí"
             />
           </div>
