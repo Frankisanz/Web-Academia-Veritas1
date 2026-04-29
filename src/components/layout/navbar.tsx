@@ -40,9 +40,9 @@ export function Navbar() {
               Inicio
             </Link>
             <div className="relative group p-2">
-              <span className="text-foreground group-hover:text-primary-600 transition-colors cursor-pointer flex items-center gap-1">
+              <Link href="/servicios" className="text-foreground group-hover:text-primary-600 transition-colors cursor-pointer flex items-center gap-1">
                 Servicios
-              </span>
+              </Link>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-primary-100 dark:border-zinc-800 p-3 flex flex-col min-w-[240px]">
                   <span className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider">Apoyo Escolar</span>

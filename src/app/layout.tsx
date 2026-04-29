@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { LocalBusinessSchema, FAQSchema } from "@/components/seo/schema";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { CookieBanner } from "@/components/layout/cookie-banner";
 import "./globals.css";
 
 const inter = Inter({
@@ -46,6 +47,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <WhatsAppButton />
+          <CookieBanner />
         </div>
       </body>
     </html>
