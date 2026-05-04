@@ -104,7 +104,7 @@ export default function PostSelectividad() {
             Únete a nuestro Intensivo de Selectividad en Úbeda. Grupos reducidos, material actualizado y profesores que te acompañan hasta el examen.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" className="rounded-full font-bold" asChild>
+            <Button size="lg" variant="glass" className="rounded-full font-bold" asChild>
               <Link href="/contacto">Reservar mi plaza</Link>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full bg-transparent border-white text-white hover:bg-white/10" asChild>
