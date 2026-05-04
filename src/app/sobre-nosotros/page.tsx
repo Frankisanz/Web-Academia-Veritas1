@@ -13,7 +13,7 @@ export default function SobreNosotrosPage() {
     "name": "Sonia Higueras García",
     "jobTitle": "Directora Académica y Profesora",
     "description": "Profesional, inteligente, disciplinada y plenamente implicada en el rendimiento y éxito de sus alumnos. Años de experiencia en clases particulares y apoyo escolar multidisciplinar en Úbeda. Graduada en Geografía e Historia.",
-    "image": "https://frankisanz.github.io/Web-Academia-Veritas1/sonia-higueras.jpg",
+    "image": "https://academiaveritas.es/sonia-higueras.jpg",
     "affiliation": {
       "@type": "EducationalOrganization",
       "name": "Academia Veritas"
