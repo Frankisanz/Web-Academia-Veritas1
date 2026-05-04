@@ -12,6 +12,8 @@ const articulos = [
     categoria: "Técnicas de Estudio",
     fecha: "28 Abril 2026",
     lectura: "5 min",
+    slug: "tecnicas-estudio-eso",
+    activo: false,
   },
   {
     titulo: "Cómo Preparar la Selectividad (PEvAU) sin Estrés",
@@ -19,6 +21,8 @@ const articulos = [
     categoria: "Selectividad",
     fecha: "15 Abril 2026",
     lectura: "7 min",
+    slug: "como-preparar-selectividad-sin-estres",
+    activo: true,
   },
   {
     titulo: "La Importancia del Apoyo Escolar en Edades Tempranas",
@@ -26,6 +30,8 @@ const articulos = [
     categoria: "Apoyo Escolar",
     fecha: "2 Abril 2026",
     lectura: "4 min",
+    slug: "importancia-apoyo-primaria",
+    activo: false,
   },
   {
     titulo: "Consejos para Padres: Cómo Motivar a tu Hijo a Estudiar",
@@ -33,6 +39,8 @@ const articulos = [
     categoria: "Consejos para Padres",
     fecha: "20 Marzo 2026",
     lectura: "6 min",
+    slug: "consejos-padres-motivacion",
+    activo: false,
   },
   {
     titulo: "Matemáticas en Secundaria: Cómo Superar el Miedo a los Números",
@@ -40,6 +48,8 @@ const articulos = [
     categoria: "Matemáticas",
     fecha: "5 Marzo 2026",
     lectura: "5 min",
+    slug: "superar-miedo-matematicas",
+    activo: false,
   },
   {
     titulo: "Ventajas de Estudiar en Grupos Reducidos",
@@ -47,6 +57,8 @@ const articulos = [
     categoria: "Metodología",
     fecha: "18 Febrero 2026",
     lectura: "4 min",
+    slug: "ventajas-grupos-reducidos",
+    activo: false,
   },
 ];
 
@@ -75,9 +87,11 @@ export default function BlogPage() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-white dark:bg-zinc-900 rounded-3xl shadow-sm border border-slate-100 dark:border-zinc-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
             >
-              <div className="bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/30 dark:to-zinc-900 p-6 flex items-center justify-center min-h-[140px]">
-                <GraduationCap className="h-16 w-16 text-primary-300 dark:text-primary-700" />
-              </div>
+              <Link href={a.activo ? `/blog/${a.slug}` : "#"} className={a.activo ? "cursor-pointer" : "cursor-default"}>
+                <div className="bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/30 dark:to-zinc-900 p-6 flex items-center justify-center min-h-[140px]">
+                  <GraduationCap className="h-16 w-16 text-primary-300 dark:text-primary-700" />
+                </div>
+              </Link>
               <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">
@@ -87,13 +101,27 @@ export default function BlogPage() {
                     <Clock className="h-3 w-3" /> {a.lectura}
                   </span>
                 </div>
-                <h2 className="text-lg font-bold text-foreground mb-3 leading-tight">{a.titulo}</h2>
+                <h2 className="text-lg font-bold text-foreground mb-3 leading-tight">
+                  {a.activo ? (
+                    <Link href={`/blog/${a.slug}`} className="hover:text-primary-600 transition-colors">
+                      {a.titulo}
+                    </Link>
+                  ) : (
+                    a.titulo
+                  )}
+                </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4">{a.extracto}</p>
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-zinc-800">
                   <span className="text-xs text-muted-foreground">{a.fecha}</span>
-                  <span className="flex items-center text-primary-600 font-medium text-sm cursor-default">
-                    Próximamente <ArrowRight className="ml-1 h-4 w-4" />
-                  </span>
+                  {a.activo ? (
+                    <Link href={`/blog/${a.slug}`} className="flex items-center text-primary-600 font-bold text-sm hover:gap-2 transition-all">
+                      Leer artículo <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  ) : (
+                    <span className="flex items-center text-slate-400 font-medium text-sm cursor-default">
+                      Próximamente <ArrowRight className="ml-1 h-4 w-4" />
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.article>
