@@ -20,8 +20,6 @@ export const metadata: Metadata = {
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
     ],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
   },
   manifest: "/manifest.json",
   openGraph: {
