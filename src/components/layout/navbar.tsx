@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, BookOpen, GraduationCap, Languages } from "lucide-react";
+import { Menu, X, BookOpen, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { motion } from "framer-motion";
 import { Clock, Calendar, ChevronLeft, GraduationCap, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -53,7 +52,7 @@ export default function PostSelectividad() {
 
           <h2 className="text-2xl font-bold mb-4">1. La Clave está en la Planificación Inversa</h2>
           <p>
-            No empieces a estudiar "a ver qué sale". Empieza por el final. Mira la fecha de tus exámenes en Jaén y cuenta los días que tienes. Divide el temario de forma realista, dejando siempre la última semana libre para repasos generales y simulacros.
+            No empieces a estudiar &quot;a ver qué sale&quot;. Empieza por el final. Mira la fecha de tus exámenes en Jaén y cuenta los días que tienes. Divide el temario de forma realista, dejando siempre la última semana libre para repasos generales y simulacros.
           </p>
           <div className="bg-slate-50 dark:bg-zinc-900 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800 my-8 text-sm italic">
             <strong>Consejo de Academia Veritas:</strong> No estudies más de 2 asignaturas por día para evitar el agotamiento cognitivo.

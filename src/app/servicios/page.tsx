@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { GraduationCap, BookOpen, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { GraduationCap, ArrowRight, Sparkles, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ const services = [
   }
 ];
 
-import { Languages } from "lucide-react";
+
 
 export default function ServiciosPage() {
   return (
