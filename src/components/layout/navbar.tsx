@@ -87,6 +87,9 @@ export function Navbar() {
             <Link href="/contacto" className="text-foreground hover:text-primary-600 transition-colors">
               Contacto
             </Link>
+            <Link href="/blog" className="text-foreground hover:text-primary-600 transition-colors">
+              Blog
+            </Link>
           </nav>
 
           <div className="hidden md:block">
@@ -116,6 +119,9 @@ export function Navbar() {
           </Link>
           <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             Contacto
+          </Link>
+          <Link href="/blog" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+            Blog
           </Link>
 
           <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
