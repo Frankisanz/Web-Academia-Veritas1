@@ -7,13 +7,38 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
-  const [formData, setFormData] = useState({ name: "", phone: "", interest: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", interest: "" });
+  const [formSent, setFormSent] = useState(false);
+  const [formError, setFormError] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Nuevo Lead de Contacto:", formData);
-    alert("¡Gracias! Hemos recibido tu solicitud. Log: " + JSON.stringify(formData));
-    setFormData({ name: "", phone: "", interest: "" });
+    setFormLoading(true);
+    setFormError(false);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/soniahg41@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          Nombre: formData.name,
+          Email: formData.email,
+          Teléfono: formData.phone,
+          Interés: formData.interest,
+          _subject: "Nueva solicitud de plaza - Academia Veritas",
+        }),
+      });
+      if (res.ok) {
+        setFormSent(true);
+        setFormData({ name: "", email: "", phone: "", interest: "" });
+      } else {
+        setFormError(true);
+      }
+    } catch {
+      setFormError(true);
+    } finally {
+      setFormLoading(false);
+    }
   };
 
   return (
@@ -53,7 +78,7 @@ export default function Home() {
               </h1>
               
               <p className="text-lg text-slate-700 dark:text-slate-300 font-medium mb-8 leading-relaxed max-w-xl">
-                Academia Veritas en Úbeda. Supera tus retos escolares en Primaria, Secundaria y Bachillerato, aprende inglés y domina otras lenguas con profesores expertos y un método comprobado.
+                Academia Veritas en Úbeda. Supera tus retos escolares en Primaria, Secundaria y Bachillerato con profesores expertos y un método comprobado.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -86,51 +111,78 @@ export default function Home() {
             >
               {/* Glass Form Card */}
               <div className="glass rounded-3xl p-8 shadow-2xl relative z-10 border-white/40">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Comienza Hoy</h3>
-                  <p className="text-muted-foreground text-sm">Déjanos tus datos y te asesoramos sin compromiso.</p>
-                </div>
-                
-                <form id="contacto" onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="text-sm font-medium mb-1 block text-foreground">Nombre completo</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formData.name}
-                      onChange={e => setFormData({...formData, name: e.target.value})}
-                      className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium"
-                      placeholder="Juan Pérez"
-                    />
+                {formSent ? (
+                  <div className="text-center py-8 space-y-4">
+                    <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="h-8 w-8 text-green-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900">¡Solicitud Enviada!</h3>
+                    <p className="text-slate-600 text-sm">Hemos recibido tus datos. Nos pondremos en contacto contigo lo antes posible.</p>
+                    <button onClick={() => setFormSent(false)} className="text-primary-600 font-medium text-sm hover:underline mt-4 cursor-pointer">Enviar otra solicitud</button>
                   </div>
-                  <div>
-                    <label className="text-sm font-medium mb-1 block text-foreground">Teléfono</label>
-                    <input 
-                      type="tel" 
-                      required
-                      value={formData.phone}
-                      onChange={e => setFormData({...formData, phone: e.target.value})}
-                      className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium"
-                      placeholder="600 000 000"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-1 block text-foreground">Me interesa...</label>
-                    <select 
-                      required
-                      value={formData.interest}
-                      onChange={e => setFormData({...formData, interest: e.target.value})}
-                      className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium appearance-none"
-                    >
-                      <option value="" disabled>Selecciona una opción</option>
-                      <option value="ingles">Clases de Inglés</option>
-                      <option value="refuerzo">Apoyo Escolar / Selectividad</option>
-                    </select>
-                  </div>
-                  <Button type="submit" size="lg" className="w-full h-14 mt-2 text-base">
-                    Reservar mi plaza
-                  </Button>
-                </form>
+                ) : (
+                  <>
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">Comienza Hoy</h3>
+                      <p className="text-slate-600 text-sm">Déjanos tus datos y te asesoramos sin compromiso.</p>
+                    </div>
+                    
+                    <form id="contacto" onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <label className="text-sm font-medium mb-1 block text-slate-800">Nombre completo</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formData.name}
+                          onChange={e => setFormData({...formData, name: e.target.value})}
+                          className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
+                          placeholder="Juan Pérez"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-1 block text-slate-800">Correo electrónico</label>
+                        <input 
+                          type="email" 
+                          required
+                          value={formData.email}
+                          onChange={e => setFormData({...formData, email: e.target.value})}
+                          className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
+                          placeholder="tu@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-1 block text-slate-800">Teléfono</label>
+                        <input 
+                          type="tel" 
+                          required
+                          value={formData.phone}
+                          onChange={e => setFormData({...formData, phone: e.target.value})}
+                          className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium text-slate-900 placeholder:text-slate-400"
+                          placeholder="600 000 000"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-1 block text-slate-800">Me interesa...</label>
+                        <select 
+                          required
+                          value={formData.interest}
+                          onChange={e => setFormData({...formData, interest: e.target.value})}
+                          className="w-full h-12 px-4 rounded-xl border border-primary-100 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all font-medium text-slate-900 appearance-none"
+                        >
+                          <option value="" disabled>Selecciona una opción</option>
+                          <option value="ingles">Clases de Inglés</option>
+                          <option value="refuerzo">Apoyo Escolar / Selectividad</option>
+                        </select>
+                      </div>
+                      {formError && (
+                        <p className="text-red-600 text-sm font-medium">Hubo un error al enviar. Inténtalo de nuevo.</p>
+                      )}
+                      <Button type="submit" size="lg" className="w-full h-14 mt-2 text-base" disabled={formLoading}>
+                        {formLoading ? "Enviando..." : "Reservar mi plaza"}
+                      </Button>
+                    </form>
+                  </>
+                )}
               </div>
 
               {/* Decoration Elements */}
@@ -262,6 +314,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Nosotros / Profesora Section */}
+      <section id="nosotros" className="py-24 bg-white dark:bg-black relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 text-primary-700 font-semibold mb-4 text-sm">
+              <GraduationCap className="h-4 w-4" /> Conoce a Nuestra Profesora
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+              Sonia <span className="text-gradient">Higueras García</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Directora Académica y alma de Academia Veritas. Profesional, inteligente y plenamente implicada en el éxito de sus alumnos.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            {/* Photo */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4] max-h-[500px] mx-auto w-full">
+              <img
+                src="../sonia-higueras.jpg"
+                alt="Sonia Higueras García - Profesora de Academia Veritas en Úbeda"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="glass rounded-2xl px-5 py-3 flex items-center gap-3">
+                  <div className="bg-primary-600 p-2 rounded-xl text-white">
+                    <GraduationCap className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm">Directora Académica</p>
+                    <p className="text-white/80 text-xs">Graduada en Geografía e Historia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Credentials */}
+            <div className="space-y-5">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                En Academia Veritas creemos que la clave del éxito académico reside en la calidad humana y profesional del docente. Sonia lidera nuestro proyecto educativo en Úbeda con años de experiencia.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 bg-primary-50/50 dark:bg-zinc-900 rounded-2xl border border-primary-100 dark:border-zinc-800">
+                  <div className="bg-white dark:bg-zinc-800 p-2.5 rounded-xl shadow-sm shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">Amplia Experiencia Docente</h3>
+                    <p className="text-muted-foreground text-sm mt-1">Años de experiencia impartiendo clases particulares de apoyo escolar en Úbeda en diversas disciplinas.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-primary-50/50 dark:bg-zinc-900 rounded-2xl border border-primary-100 dark:border-zinc-800">
+                  <div className="bg-white dark:bg-zinc-800 p-2.5 rounded-xl shadow-sm shrink-0 mt-0.5">
+                    <BookOpen className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">Graduada en Geografía e Historia</h3>
+                    <p className="text-muted-foreground text-sm mt-1">Base sólida en humanidades y ciencias sociales para una transmisión de conocimientos profunda.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-primary-50/50 dark:bg-zinc-900 rounded-2xl border border-primary-100 dark:border-zinc-800">
+                  <div className="bg-white dark:bg-zinc-800 p-2.5 rounded-xl shadow-sm shrink-0 mt-0.5">
+                    <GraduationCap className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">Doble Máster Universitario</h3>
+                    <p className="text-muted-foreground text-sm mt-1">Máster en Profesorado (Enseñanza Obligatoria e Idiomas) y en Análisis Histórico del Mundo Actual.</p>
+                  </div>
+                </div>
+              </div>
+
+              <Button size="lg" className="w-full sm:w-auto mt-2 rounded-full" asChild>
+                <Link href="/sobre-nosotros">
+                  Conocer más sobre Sonia <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-white dark:bg-black">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
@@ -282,7 +419,7 @@ export default function Home() {
             </div>
             <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
               <h3 className="text-lg font-bold text-foreground mb-2">¿Dónde está ubicada Academia Veritas?</h3>
-              <p className="text-muted-foreground">Nuestra academia de apoyo escolar e idiomas se encuentra en Úbeda (Jaén), en la Calle Torrenueva Nº 1, 1º. Un lugar céntrico y de fácil acceso para todos los estudiantes de la zona.</p>
+              <p className="text-muted-foreground">Nuestra academia de apoyo escolar se encuentra en Úbeda (Jaén), en la Calle Torrenueva Nº 1, 1º. Un lugar céntrico y de fácil acceso para todos los estudiantes de la zona.</p>
             </div>
           </div>
         </div>

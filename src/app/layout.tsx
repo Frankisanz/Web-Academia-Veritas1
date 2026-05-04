@@ -15,6 +15,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Academia Veritas | Clases Particulares y Apoyo Escolar en Úbeda",
   description: "Tu centro experto en apoyo escolar en Úbeda. Clases particulares de matemáticas, lengua, ciencias e inglés. Preparación intensiva para Selectividad (PEvAU).",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Academia Veritas | Clases Particulares en Úbeda",
     description: "La mejor academia de Úbeda para apoyo escolar, refuerzo educativo y preparación de Selectividad.",

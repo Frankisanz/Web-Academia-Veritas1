@@ -1,0 +1,17 @@
+{
+  "name": "Academia Veritas",
+  "short_name": "Veritas",
+  "description": "Clases Particulares y Apoyo Escolar en Úbeda",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

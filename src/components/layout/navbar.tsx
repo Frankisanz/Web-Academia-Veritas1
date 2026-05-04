@@ -107,14 +107,23 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-zinc-950 shadow-xl border-t border-primary-50 dark:border-zinc-800 py-4 px-6 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-zinc-950 shadow-xl border-t border-primary-50 dark:border-zinc-800 py-4 px-6 flex flex-col gap-1 max-h-[80vh] overflow-y-auto">
           <Link href="/" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             Inicio
           </Link>
+          <Link href="/sobre-nosotros" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl text-foreground flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
+            <GraduationCap className="h-5 w-5 text-primary-500" /> Nosotros
+          </Link>
+          <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+            Contacto
+          </Link>
+
+          <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
+
           <div className="px-4 py-2 font-semibold text-primary-600 uppercase text-sm tracking-wider">
             Servicios
           </div>
-          <div className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider mt-2">Apoyo Escolar</div>
+          <div className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider mt-1">Apoyo Escolar</div>
           <Link href="/refuerzo/primaria" className="font-medium px-4 py-2 ml-4 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
             <span className="w-1.5 h-1.5 rounded-full bg-primary-400" /> Primaria
           </Link>
@@ -134,9 +143,6 @@ export function Navbar() {
             <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)
           </Link>
 
-          <Link href="/contacto" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl mt-4 text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
-            Contacto
-          </Link>
           <Button className="w-full mt-4" size="lg" asChild>
             <Link href="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>
               Reserva tu clase
