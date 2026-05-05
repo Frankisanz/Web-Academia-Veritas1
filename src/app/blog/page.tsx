@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { BookOpen, GraduationCap, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const articulos = [
@@ -87,10 +88,13 @@ export default function BlogPage() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-white dark:bg-zinc-900 rounded-3xl shadow-sm border border-slate-100 dark:border-zinc-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
             >
-              <Link href={a.activo ? `/blog/${a.slug}` : "#"} className={a.activo ? "cursor-pointer" : "cursor-default"}>
-                <div className="bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/30 dark:to-zinc-900 p-6 flex items-center justify-center min-h-[140px]">
-                  <GraduationCap className="h-16 w-16 text-primary-300 dark:text-primary-700" />
-                </div>
+              <Link href={a.activo ? `/blog/${a.slug}` : "#"} className={a.activo ? "cursor-pointer block relative h-48 w-full" : "cursor-default block relative h-48 w-full"}>
+                <Image
+                  src="/foto-blog.jpg"
+                  alt={a.titulo}
+                  fill
+                  className="object-cover"
+                />
               </Link>
               <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">

@@ -89,7 +89,7 @@ export default function ServiciosPage() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Intensivo de Selectividad (PEvAU)</h2>
             <p className="text-primary-100 text-lg mb-8 leading-relaxed">
-              Nuestro programa estrella diseñado para asegurar tu plaza en la universidad. Temarios actualizados, simulacros de examen y resolución de dudas personalizada.
+              Afronta la fase decisiva de Bachillerato con total seguridad. Nuestro Intensivo de Selectividad te ofrece una preparación especializada con temarios totalmente actualizados, simulacros de examen reales, técnicas de estudio eficaces y resolución de dudas personalizada. Te brindamos todo el apoyo, la experiencia y las herramientas necesarias para que superes la PEvAU con éxito y alcances la nota de corte para la carrera de tus sueños.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" variant="glass" asChild className="rounded-full">
