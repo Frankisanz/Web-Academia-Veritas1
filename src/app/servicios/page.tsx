@@ -93,10 +93,10 @@ export default function ServiciosPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" variant="glass" asChild className="rounded-full">
-                <Link href="/refuerzo/preparacion-selectividad">Más información</Link>
+                <Link href="/servicios/intensivo-selectividad">Más información</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="rounded-full bg-transparent border-white/30 hover:bg-white/10 text-white">
-                <Link href="/contacto">Reservar mi plaza</Link>
+                <Link href="/servicios/intensivo-selectividad">Reservar mi plaza</Link>
               </Button>
             </div>
           </div>

@@ -248,7 +248,7 @@ export default function Home() {
               icon={<Languages className="h-8 w-8 text-primary-600" />}
               title="Intensivo Selectividad"
               desc="Preparación especializada para la fase decisiva de Bachillerato. Temarios actualizados, simulacros reales y apoyo personalizado para superar la PEvAU con éxito."
-              href="/#contacto"
+              href="/servicios/intensivo-selectividad"
               ctaText="Infórmate"
               badge="¡Nuevo!"
             />
