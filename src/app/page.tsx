@@ -247,7 +247,7 @@ export default function Home() {
             <ServiceCard 
               icon={<Languages className="h-8 w-8 text-primary-600" />}
               title="Intensivo Selectividad"
-              desc="Preparación intensiva para Selectividad (PEvAU) en las materias de Lengua e Inglés."
+              desc="Preparación especializada para la fase decisiva de Bachillerato. Temarios actualizados, simulacros reales y apoyo personalizado para superar la PEvAU con éxito."
               href="/#contacto"
               ctaText="Infórmate"
               badge="¡Nuevo!"
@@ -415,7 +415,7 @@ export default function Home() {
             </div>
             <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
               <h3 className="text-lg font-bold text-foreground mb-2">¿Cómo preparamos la Selectividad (PEvAU) en la academia?</h3>
-              <p className="text-muted-foreground">Nuestro programa intensivo se centra en la resolución de exámenes de años anteriores, simulacros cronometrados y resolución de dudas específicas. Los profesores expertos te guían para maximizar tu nota de corte.</p>
+              <p className="text-muted-foreground">Nuestro programa intensivo ofrece una preparación especializada con temarios actualizados, simulacros de examen reales y técnicas de estudio eficaces. Te brindamos todas las herramientas para maximizar tu nota de corte y superar la PEvAU con total seguridad.</p>
             </div>
             <div className="bg-slate-50 dark:bg-zinc-900/50 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800">
               <h3 className="text-lg font-bold text-foreground mb-2">¿Dónde está ubicada Academia Veritas?</h3>
