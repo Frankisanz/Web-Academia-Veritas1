@@ -220,7 +220,7 @@ export default function PostApoyoPrimaria() {
             5. ¿Qué Diferencia a una Buena Academia de Refuerzo?
           </h2>
           <p>
-            A la hora de elegir <strong>clases particulares</strong> para tu hijo, fíjate en estos factores decisivos:
+            A la hora de elegir <strong>clases particulares en Úbeda</strong> para tu hijo, fíjate en estos factores decisivos:
           </p>
 
           <ul className="not-prose space-y-3 mb-8">
