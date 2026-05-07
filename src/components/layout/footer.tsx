@@ -63,7 +63,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-primary-200/80 hover:text-white transition-colors text-sm flex items-center gap-2 w-fit">
+                <Link href="/servicios/intensivo-selectividad" className="text-primary-200/80 hover:text-white transition-colors text-sm flex items-center gap-2 w-fit">
                   Intensivo de Selectividad
                   <span className="bg-primary-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">NUEVO</span>
                 </Link>

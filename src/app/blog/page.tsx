@@ -14,7 +14,7 @@ const articulos = [
     fecha: "28 Abril 2026",
     lectura: "5 min",
     slug: "tecnicas-estudio-eso",
-    activo: false,
+    activo: true,
   },
   {
     titulo: "Cómo Preparar la Selectividad (PEvAU) sin Estrés",
@@ -32,7 +32,7 @@ const articulos = [
     fecha: "2 Abril 2026",
     lectura: "4 min",
     slug: "importancia-apoyo-primaria",
-    activo: false,
+    activo: true,
   },
   {
     titulo: "Consejos para Padres: Cómo Motivar a tu Hijo a Estudiar",
