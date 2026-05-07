@@ -217,10 +217,10 @@ export default function PostApoyoPrimaria() {
           {/* Sección 5 */}
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
             <GraduationCap className="h-7 w-7 text-primary-500 shrink-0" />
-            5. ¿Qué Diferencia a una Buena Academia de Refuerzo en Úbeda?
+            5. ¿Qué Diferencia a una Buena Academia de Refuerzo?
           </h2>
           <p>
-            No todas las <strong>academias de Úbeda</strong> ofrecen el mismo tipo de apoyo. A la hora de elegir <strong>clases particulares en Úbeda</strong> para tu hijo, fíjate en estos factores decisivos:
+            A la hora de elegir <strong>clases particulares</strong> para tu hijo, fíjate en estos factores decisivos:
           </p>
 
           <ul className="not-prose space-y-3 mb-8">
