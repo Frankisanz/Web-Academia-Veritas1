@@ -8,16 +8,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Rutas estáticas principales
   const staticRoutes = [
     '',
-    '/sobre-nosotros',
-    '/contacto',
-    '/blog',
-    '/servicios',
-    '/testimonios',
-    '/aviso-legal',
-    '/privacidad',
-    '/politica-de-cookies',
+    '/sobre-nosotros/',
+    '/contacto/',
+    '/blog/',
+    '/servicios/',
+    '/testimonios/',
+    '/aviso-legal/',
+    '/privacidad/',
+    '/politica-de-cookies/',
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: route === '' ? `${baseUrl}/` : `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: route === '' ? 1 : 0.8,
@@ -25,9 +25,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Artículos del blog
   const blogArticles = [
-    '/blog/como-preparar-selectividad-sin-estres',
-    '/blog/importancia-apoyo-primaria',
-    '/blog/tecnicas-estudio-eso',
+    '/blog/como-preparar-selectividad-sin-estres/',
+    '/blog/importancia-apoyo-primaria/',
+    '/blog/tecnicas-estudio-eso/',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Servicios especializados
   const services = [
-    '/servicios/intensivo-selectividad',
+    '/servicios/intensivo-selectividad/',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Niveles de Inglés
   const englishLevels = ['primaria', 'secundaria', 'bachillerato', 'adultos'].map((level) => ({
-    url: `${baseUrl}/ingles/${level}`,
+    url: `${baseUrl}/ingles/${level}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Niveles de Refuerzo
   const reinforcementLevels = ['primaria', 'secundaria', 'bachillerato', 'preparacion-selectividad'].map((level) => ({
-    url: `${baseUrl}/refuerzo/${level}`,
+    url: `${baseUrl}/refuerzo/${level}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,

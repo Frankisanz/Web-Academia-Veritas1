@@ -13,6 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://academiaveritas.es"),
+  alternates: {
+    canonical: "./",
+  },
   title: "Academia Veritas | Clases Particulares y Apoyo Escolar en Úbeda",
   description: "Tu centro experto en apoyo escolar en Úbeda. Clases particulares de matemáticas, lengua, ciencias e inglés. Preparación intensiva para Selectividad (PEvAU).",
   icons: {
