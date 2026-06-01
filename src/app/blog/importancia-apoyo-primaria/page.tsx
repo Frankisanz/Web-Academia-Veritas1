@@ -88,12 +88,14 @@ export default function PostApoyoPrimaria() {
             La Importancia del Apoyo Escolar en Edades Tempranas: <span className="text-gradient">Por Qué las Clases de Refuerzo en Úbeda Marcan la Diferencia</span>
           </h1>
 
-          <div className="aspect-video rounded-3xl bg-gradient-to-br from-primary-100 via-primary-50 to-amber-50 dark:from-primary-900/20 dark:via-zinc-900 dark:to-zinc-900 flex items-center justify-center mb-12 border border-slate-100 dark:border-zinc-800 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-20" />
-            <div className="relative z-10 flex flex-col items-center gap-4">
-              <BookOpen className="h-24 w-24 text-primary-300 dark:text-primary-700" />
-              <span className="text-primary-400 dark:text-primary-600 font-bold text-lg">Apoyo Escolar en Primaria</span>
-            </div>
+          <div className="aspect-video rounded-3xl relative overflow-hidden mb-12 border border-slate-100 dark:border-zinc-800 shadow-md">
+            <Image 
+              src="/primaria.jpg.jpg" 
+              alt="Apoyo Escolar Primaria en Úbeda - Academia Veritas" 
+              fill 
+              className="object-cover"
+              priority
+            />
           </div>
         </header>
 

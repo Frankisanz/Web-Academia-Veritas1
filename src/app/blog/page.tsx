@@ -96,7 +96,7 @@ export default function BlogPage() {
             >
               <Link href={a.activo ? `/blog/${a.slug}` : "#"} className={a.activo ? "cursor-pointer block relative h-48 w-full" : "cursor-default block relative h-48 w-full"}>
                 <Image
-                  src={a.imagen || "/foto-blog.jpg"}
+                  src="/foto-blog.jpg"
                   alt={a.titulo}
                   fill
                   className="object-cover"
