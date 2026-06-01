@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, GraduationCap, ArrowRight, Clock } from "lucide-react";
+import { BookOpen, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ const articulos = [
     fecha: "28 Abril 2026",
     lectura: "5 min",
     slug: "tecnicas-estudio-eso",
+    imagen: "/secundaria.jpg.jpg",
     activo: true,
   },
   {
@@ -23,6 +24,7 @@ const articulos = [
     fecha: "15 Abril 2026",
     lectura: "7 min",
     slug: "como-preparar-selectividad-sin-estres",
+    imagen: "/bachiller.jpg",
     activo: true,
   },
   {
@@ -32,6 +34,7 @@ const articulos = [
     fecha: "2 Abril 2026",
     lectura: "4 min",
     slug: "importancia-apoyo-primaria",
+    imagen: "/primaria.jpg.jpg",
     activo: true,
   },
   {
@@ -41,6 +44,7 @@ const articulos = [
     fecha: "20 Marzo 2026",
     lectura: "6 min",
     slug: "consejos-padres-motivacion",
+    imagen: "/foto-blog.jpg",
     activo: false,
   },
   {
@@ -50,6 +54,7 @@ const articulos = [
     fecha: "5 Marzo 2026",
     lectura: "5 min",
     slug: "superar-miedo-matematicas",
+    imagen: "/foto-blog.jpg",
     activo: false,
   },
   {
@@ -59,7 +64,8 @@ const articulos = [
     fecha: "18 Febrero 2026",
     lectura: "4 min",
     slug: "ventajas-grupos-reducidos",
-    activo: false,
+    imagen: "/secundaria2.jpg.jpg",
+    activo: true,
   },
 ];
 
@@ -90,7 +96,7 @@ export default function BlogPage() {
             >
               <Link href={a.activo ? `/blog/${a.slug}` : "#"} className={a.activo ? "cursor-pointer block relative h-48 w-full" : "cursor-default block relative h-48 w-full"}>
                 <Image
-                  src="/foto-blog.jpg"
+                  src={a.imagen || "/foto-blog.jpg"}
                   alt={a.titulo}
                   fill
                   className="object-cover"

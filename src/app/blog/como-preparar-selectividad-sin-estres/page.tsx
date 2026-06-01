@@ -1,17 +1,51 @@
 import { Metadata } from "next";
 import { Clock, Calendar, ChevronLeft, GraduationCap, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Cómo Preparar la Selectividad (PEvAU) sin Estrés en Úbeda | Academia Veritas",
   description: "Guía definitiva para preparar la Selectividad (PEvAU) en Úbeda sin agobios. Técnicas de estudio, planificación y consejos de expertos para asegurar tu nota.",
   keywords: ["PEvAU Úbeda", "Selectividad Úbeda", "preparar selectividad sin estrés", "academia selectividad Úbeda", "técnicas de estudio PEvAU"],
+  openGraph: {
+    title: "Cómo Preparar la Selectividad (PEvAU) sin Estrés en Úbeda | Academia Veritas",
+    description: "Guía definitiva para preparar la Selectividad (PEvAU) en Úbeda sin agobios. Técnicas de estudio, planificación y consejos de expertos para asegurar tu nota.",
+    url: "https://academiaveritas.es/blog/como-preparar-selectividad-sin-estres",
+    type: "article",
+    locale: "es_ES",
+    siteName: "Academia Veritas",
+  },
 };
 
 export default function PostSelectividad() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo Preparar la Selectividad (PEvAU) sin Estrés: La Guía Definitiva",
+    "description": "Guía definitiva para preparar la Selectividad (PEvAU) en Úbeda sin agobios. Técnicas de estudio, planificación y consejos de expertos para asegurar tu nota.",
+    "author": {
+      "@type": "Person",
+      "name": "Sonia Higueras García",
+      "jobTitle": "Directora Académica",
+      "affiliation": { "@type": "EducationalOrganization", "name": "Academia Veritas" }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Academia Veritas",
+      "url": "https://academiaveritas.es"
+    },
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-05-09",
+    "mainEntityOfPage": "https://academiaveritas.es/blog/como-preparar-selectividad-sin-estres"
+  };
+
   return (
     <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
         {/* Navegación */}
         <Link 
@@ -39,8 +73,14 @@ export default function PostSelectividad() {
             Cómo Preparar la Selectividad (PEvAU) sin Estrés: <span className="text-gradient">La Guía Definitiva</span>
           </h1>
 
-          <div className="aspect-video rounded-3xl bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-zinc-900 flex items-center justify-center mb-12 border border-slate-100 dark:border-zinc-800">
-            <GraduationCap className="h-32 w-32 text-primary-200 dark:text-primary-800" />
+          <div className="aspect-video rounded-3xl relative overflow-hidden mb-12 border border-slate-100 dark:border-zinc-800 shadow-md">
+            <Image 
+              src="/bachiller.jpg" 
+              alt="Preparar Selectividad en Úbeda - Academia Veritas" 
+              fill 
+              className="object-cover"
+              priority
+            />
           </div>
         </header>
 

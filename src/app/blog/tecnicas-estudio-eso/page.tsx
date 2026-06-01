@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Clock, Calendar, ChevronLeft, BookOpen, CheckCircle2, Brain, Timer, Layout, Target, Zap, Coffee } from "lucide-react";
+import { Clock, Calendar, ChevronLeft, Brain, Timer, Layout, Target, Zap, Coffee } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -100,7 +100,7 @@ export default function PostTecnicasEstudio() {
             1. La Técnica Pomodoro: Vence a la Procrastinación
           </h2>
           <p>
-            El cerebro humano tiene un límite de concentración intensa. La técnica Pomodoro consiste en trabajar en bloques de <strong>25 minutos (un "pomodoro") seguidos de 5 minutos de descanso</strong>. Después de cuatro bloques, se toma un descanso largo de 20-30 minutos.
+            El cerebro humano tiene un límite de concentración intensa. La técnica Pomodoro consiste en trabajar en bloques de <strong>25 minutos (un &quot;pomodoro&quot;) seguidos de 5 minutos de descanso</strong>. Después de cuatro bloques, se toma un descanso largo de 20-30 minutos.
           </p>
           <p>
             Esta técnica es perfecta para estudiantes de ESO que se sienten abrumados por largas tardes de estudio. Saber que el descanso está cerca ayuda a mantener el foco y evita la fatiga mental.
@@ -136,12 +136,12 @@ export default function PostTecnicasEstudio() {
             La mayoría de estudiantes estudia de forma pasiva: leyendo y subrayando. El Recuerdo Activo consiste en <strong>ponerte a prueba constantemente</strong>. Cierra el libro e intenta escribir todo lo que recuerdas, o hazte preguntas sobre el tema.
           </p>
           <p>
-            Es mucho más cansado que leer, pero multiplica por diez la retención a largo plazo. Las "flashcards" o tarjetas de estudio son una herramienta excelente para aplicar este método.
+            Es mucho más cansado que leer, pero multiplica por diez la retención a largo plazo. Las &quot;flashcards&quot; o tarjetas de estudio son una herramienta excelente para aplicar este método.
           </p>
 
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
             <Coffee className="h-7 w-7 text-primary-500 shrink-0" />
-            5. El Sueño: El "botón de guardado" de tu cerebro
+            5. El Sueño: El &quot;botón de guardado&quot; de tu cerebro
           </h2>
           <p>
             No es una técnica de estudio propiamente dicha, pero es la más importante. Durante el sueño, el cerebro procesa la información del día y la traslada a la memoria a largo plazo. <strong>Estudiar toda la noche antes de un examen es la forma más eficaz de olvidar lo aprendido</strong>.

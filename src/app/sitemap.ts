@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/como-preparar-selectividad-sin-estres/',
     '/blog/importancia-apoyo-primaria/',
     '/blog/tecnicas-estudio-eso/',
+    '/blog/ventajas-grupos-reducidos/',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

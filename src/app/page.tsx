@@ -333,7 +333,7 @@ export default function Home() {
             {/* Photo */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4] max-h-[500px] mx-auto w-full">
               <img
-                src="../sonia-higueras.jpg"
+                src="/sonia-higueras.jpg"
                 alt="Sonia Higueras García - Profesora de Academia Veritas en Úbeda"
                 className="w-full h-full object-cover"
               />

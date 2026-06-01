@@ -103,12 +103,12 @@ export default async function RefuerzoPage({ params }: { params: Promise<{ level
              </div>
           </div>
           <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl order-1 md:order-2">
-             <img src={`../../${info.images[0]}`} alt={info.title} className="w-full h-full object-cover" />
+             <img src={`/${info.images[0]}`} alt={info.title} className="w-full h-full object-cover" />
           </div>
         </div>
 
         <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl mb-24 hidden md:block">
-           <img src={`../../${info.images[1]}`} alt={`${info.title} - Segunda imagen`} className="w-full h-full object-cover" />
+           <img src={`/${info.images[1]}`} alt={`${info.title} - Segunda imagen`} className="w-full h-full object-cover" />
         </div>
 
         {/* Sección Específica de Materias */}

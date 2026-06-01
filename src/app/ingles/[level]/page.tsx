@@ -50,7 +50,7 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
-             <img src={`../../${images[0]}`} alt={`Inglés para ${levelName}`} className="w-full h-full object-cover" />
+             <img src={`/${images[0]}`} alt={`Inglés para ${levelName}`} className="w-full h-full object-cover" />
           </div>
           <div className="space-y-8">
              <h3 className="text-3xl font-bold">¿Qué aprenderás?</h3>
@@ -79,7 +79,7 @@ export default async function InglesPage({ params }: { params: Promise<{ level: 
         </div>
 
         <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl mb-24 hidden md:block mt-12">
-           <img src={`../../${images[1]}`} alt={`Clases de Inglés - ${levelName}`} className="w-full h-full object-cover" />
+           <img src={`/${images[1]}`} alt={`Clases de Inglés - ${levelName}`} className="w-full h-full object-cover" />
         </div>
       </div>
     </div>

@@ -17,7 +17,8 @@ const services = [
     levels: [
       { name: "Primaria", href: "/refuerzo/primaria" },
       { name: "Secundaria (ESO)", href: "/refuerzo/secundaria" },
-      { name: "Bachillerato", href: "/refuerzo/bachillerato" }
+      { name: "Bachillerato", href: "/refuerzo/bachillerato" },
+      { name: "Preparación Selectividad", href: "/refuerzo/preparacion-selectividad" }
     ]
   },
   {
@@ -27,7 +28,8 @@ const services = [
     color: "bg-purple-50 text-purple-600",
     levels: [
       { name: "Primaria", href: "/ingles/primaria" },
-      { name: "Secundaria & Bachillerato", href: "/ingles/secundaria" },
+      { name: "Secundaria", href: "/ingles/secundaria" },
+      { name: "Bachillerato", href: "/ingles/bachillerato" },
       { name: "Adultos", href: "/ingles/adultos" }
     ]
   }
