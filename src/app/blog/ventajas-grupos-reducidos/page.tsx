@@ -1,8 +1,10 @@
 import { Metadata } from "next";
-import { Clock, Calendar, ChevronLeft, GraduationCap, CheckCircle2, Users, Target, BookOpen, Brain, Heart, Star, Sparkles } from "lucide-react";
+import { Clock, Calendar, ChevronLeft, Users, Target, Brain, Heart, Star, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbSchema } from "@/components/seo/schema";
+import { ArticulosRelacionados } from "@/components/blog/articulos-relacionados";
 
 export const metadata: Metadata = {
   title: "Ventajas de Estudiar en Grupos Reducidos | Academia Veritas Úbeda",
@@ -55,6 +57,12 @@ export default function PostGruposReducidos() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Blog", path: "/blog/" },
+          { name: "Ventajas de los grupos reducidos", path: "/blog/ventajas-grupos-reducidos/" },
+        ]}
       />
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
         {/* Navegación */}
@@ -222,6 +230,8 @@ export default function PostGruposReducidos() {
             </Link>
           </div>
         </footer>
+
+        <ArticulosRelacionados slugActual="ventajas-grupos-reducidos" />
       </div>
     </div>
   );

@@ -1,11 +1,13 @@
 import { Metadata } from "next";
-import { Clock, Calendar, ChevronLeft, Brain, Timer, Layout, Target, Zap, Coffee } from "lucide-react";
+import { Clock, Calendar, ChevronLeft, Timer, Layout, Target, Zap, Coffee } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbSchema } from "@/components/seo/schema";
+import { ArticulosRelacionados } from "@/components/blog/articulos-relacionados";
 
 export const metadata: Metadata = {
-  title: "5 Técnicas de Estudio para Estudiantes de ESO | Academia Veritas Úbeda",
+  title: "5 Técnicas de Estudio para la ESO | Academia Veritas Úbeda",
   description: "Mejora tu rendimiento académico en la ESO con estas 5 técnicas de estudio probadas: Pomodoro, Mapas Mentales, Feynmann y más. Academia Veritas Úbeda.",
   keywords: [
     "técnicas de estudio ESO",
@@ -55,6 +57,12 @@ export default function PostTecnicasEstudio() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Blog", path: "/blog/" },
+          { name: "Técnicas de estudio para la ESO", path: "/blog/tecnicas-estudio-eso/" },
+        ]}
       />
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
         <Link
@@ -174,6 +182,8 @@ export default function PostTecnicasEstudio() {
             </div>
           </div>
         </footer>
+
+        <ArticulosRelacionados slugActual="tecnicas-estudio-eso" />
       </div>
     </div>
   );

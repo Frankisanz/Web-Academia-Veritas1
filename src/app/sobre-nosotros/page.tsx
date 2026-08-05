@@ -1,23 +1,46 @@
 import { Metadata } from "next";
 import { Trophy, GraduationCap, Award, BookOpen, Star } from "lucide-react";
+import { BreadcrumbSchema, ORG_ID } from "@/components/seo/schema";
+import { SITE_URL } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Conoce a Sonia Higueras | Profesora en Úbeda | Academia Veritas",
-  description: "Sonia Higueras García, profesora experta en Úbeda. Graduada en Geografía e Historia con doble máster. Implicación y disciplina para tu éxito escolar.",
+  title: "Sobre Nosotros | Sonia Higueras | Academia Veritas Úbeda",
+  description: "Sonia Higueras García, profesora y directora de Academia Veritas en Úbeda. Graduada en Geografía e Historia con doble máster. Conoce nuestro método.",
+  keywords: [
+    "Sonia Higueras Úbeda",
+    "profesora particular Úbeda",
+    "academia Veritas Úbeda",
+    "quién da las clases academia Úbeda",
+  ],
+  openGraph: {
+    title: "Sobre Nosotros | Academia Veritas Úbeda",
+    description: "Conoce a Sonia Higueras García, directora académica de Academia Veritas en Úbeda.",
+    url: `${SITE_URL}/sobre-nosotros/`,
+    type: "profile",
+    locale: "es_ES",
+    siteName: "Academia Veritas",
+  },
 };
 
 export default function SobreNosotrosPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${SITE_URL}/sobre-nosotros/#sonia`,
     "name": "Sonia Higueras García",
     "jobTitle": "Directora Académica y Profesora",
     "description": "Profesional, inteligente, disciplinada y plenamente implicada en el rendimiento y éxito de sus alumnos. Años de experiencia en clases particulares y apoyo escolar multidisciplinar en Úbeda. Graduada en Geografía e Historia.",
-    "image": "https://academiaveritas.es/sonia-higueras.jpg",
-    "affiliation": {
-      "@type": "EducationalOrganization",
-      "name": "Academia Veritas"
-    }
+    "image": `${SITE_URL}/sonia-higueras.jpg`,
+    "url": `${SITE_URL}/sobre-nosotros/`,
+    "knowsAbout": [
+      "Apoyo escolar",
+      "Técnicas de estudio",
+      "Historia de España",
+      "Geografía",
+      "Preparación de la Selectividad (PEvAU)",
+    ],
+    "worksFor": { "@id": ORG_ID },
+    "affiliation": { "@id": ORG_ID },
   };
 
   return (
@@ -26,6 +49,7 @@ export default function SobreNosotrosPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
+      <BreadcrumbSchema items={[{ name: "Sobre Nosotros", path: "/sobre-nosotros/" }]} />
       <div className="container mx-auto px-6 lg:px-8">
         
         {/* Perfil Profesora Sonia */}

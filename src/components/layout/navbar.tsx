@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, BookOpen, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { asignaturas } from "@/lib/asignaturas";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,13 +72,25 @@ export function Navbar() {
                   </Link>
 
                   <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
-                  
+
                   <Link href="/ingles/secundaria" className="px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3">
                     <BookOpen className="h-5 w-5 text-primary-500" />
                     <span className="text-foreground font-medium">Inglés (Todos los niveles)</span>
                   </Link>
-                  
 
+                  <div className="h-px bg-slate-100 dark:bg-zinc-800 my-2" />
+
+                  <span className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider">Por asignatura</span>
+                  {asignaturas.map((a) => (
+                    <Link
+                      key={a.slug}
+                      href={`/clases-particulares/${a.slug}`}
+                      className="px-4 py-2 hover:bg-primary-50 dark:hover:bg-zinc-800 rounded-xl transition-colors flex items-center gap-3"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary-400" />
+                      <span className="text-foreground text-sm">{a.nombre}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -148,6 +161,18 @@ export function Navbar() {
           <Link href="/ingles/secundaria" className="font-medium px-4 py-3 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground mt-2" onClick={() => setIsMobileMenuOpen(false)}>
             <BookOpen className="h-5 w-5" /> Inglés (Todos los niveles)
           </Link>
+
+          <div className="px-4 py-1 text-xs font-bold text-primary-500 uppercase tracking-wider mt-3">Por asignatura</div>
+          {asignaturas.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/clases-particulares/${a.slug}`}
+              className="font-medium px-4 py-2 ml-4 hover:bg-primary-50 dark:hover:bg-zinc-900 rounded-xl flex items-center gap-3 text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-400" /> {a.nombre}
+            </Link>
+          ))}
 
           <Button className="w-full mt-4" size="lg" asChild>
             <Link href="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>

@@ -3,10 +3,12 @@ import { Clock, Calendar, ChevronLeft, GraduationCap, CheckCircle2, BookOpen, He
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbSchema } from "@/components/seo/schema";
+import { ArticulosRelacionados } from "@/components/blog/articulos-relacionados";
 
 export const metadata: Metadata = {
-  title: "La Importancia del Apoyo Escolar en Edades Tempranas | Clases de Refuerzo en Úbeda",
-  description: "¿Por qué invertir en clases de refuerzo en Úbeda desde Primaria? Descubre cómo el apoyo escolar temprano mejora las notas, la autoestima y los hábitos de estudio de tu hijo. Academia Veritas Úbeda.",
+  title: "Apoyo Escolar en Primaria: Por Qué Importa | Academia Veritas",
+  description: "Por qué las clases de refuerzo desde Primaria en Úbeda mejoran las notas, la autoestima y los hábitos de estudio de tu hijo antes de que sea tarde.",
   keywords: [
     "clases de refuerzo Úbeda",
     "apoyo escolar Úbeda",
@@ -60,6 +62,12 @@ export default function PostApoyoPrimaria() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Blog", path: "/blog/" },
+          { name: "La importancia del apoyo en Primaria", path: "/blog/importancia-apoyo-primaria/" },
+        ]}
       />
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
         {/* Navegación */}
@@ -343,6 +351,8 @@ export default function PostApoyoPrimaria() {
             </Link>
           </div>
         </footer>
+
+        <ArticulosRelacionados slugActual="importancia-apoyo-primaria" />
       </div>
     </div>
   );

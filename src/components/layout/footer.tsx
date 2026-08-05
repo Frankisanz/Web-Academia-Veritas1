@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { GraduationCap, MapPin, Phone, Mail } from "lucide-react";
+import { asignaturas } from "@/lib/asignaturas";
+import { business } from "@/lib/business";
 
 export function Footer() {
   return (
@@ -15,27 +17,39 @@ export function Footer() {
               <span className="text-2xl font-bold tracking-tight">Academia Veritas</span>
             </div>
             <p className="text-primary-200/80 leading-relaxed text-sm">
-              Tu centro educativo de confianza en Úbeda. Formando a las futuras generaciones con innovación, dedicación y excelencia académica.
+              Tu centro educativo de confianza en Úbeda. Clases particulares y apoyo
+              escolar de Primaria, ESO y Bachillerato, inglés y preparación de Selectividad
+              (PEvAU).
             </p>
           </div>
 
           {/* Contact Col */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Contacto</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-4 text-primary-200/80">
-                <MapPin className="h-5 w-5 shrink-0 mt-0.5 text-primary-400" />
-                <span className="text-sm">Calle Torrenueva Nº 1, 1º<br />23400 Úbeda, Jaén</span>
-              </li>
-              <li className="flex items-center gap-4 text-primary-200/80">
-                <Phone className="h-5 w-5 shrink-0 text-primary-400" />
-                <span className="text-sm">626 819 636</span>
-              </li>
-              <li className="flex items-center gap-4 text-primary-200/80">
-                <Mail className="h-5 w-5 shrink-0 text-primary-400" />
-                <span className="text-sm">soniahg41@gmail.com</span>
-              </li>
-            </ul>
+            <address className="not-italic">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4 text-primary-200/80">
+                  <MapPin className="h-5 w-5 shrink-0 mt-0.5 text-primary-400" />
+                  <span className="text-sm">
+                    {business.street}
+                    <br />
+                    {business.postalCode} {business.locality}, {business.region}
+                  </span>
+                </li>
+                <li className="flex items-center gap-4 text-primary-200/80">
+                  <Phone className="h-5 w-5 shrink-0 text-primary-400" />
+                  <a href={`tel:${business.phoneE164}`} className="text-sm hover:text-white transition-colors">
+                    {business.phone}
+                  </a>
+                </li>
+                <li className="flex items-center gap-4 text-primary-200/80">
+                  <Mail className="h-5 w-5 shrink-0 text-primary-400" />
+                  <a href={`mailto:${business.email}`} className="text-sm hover:text-white transition-colors break-all">
+                    {business.email}
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
 
           {/* Links Col 1 */}
@@ -74,25 +88,52 @@ export function Footer() {
 
           {/* Links Col 2 */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">La Academia</h4>
+            <h4 className="text-lg font-semibold mb-6">Por Asignatura</h4>
             <ul className="space-y-3">
-              <li>
-                <Link href="/sobre-nosotros" className="text-primary-200/80 hover:text-white transition-colors text-sm">
-                  Sobre Nosotros
-                </Link>
-              </li>
-              <li>
-                <Link href="/testimonios" className="text-primary-200/80 hover:text-white transition-colors text-sm">
-                  Testimonios de Alumnos
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-primary-200/80 hover:text-white transition-colors text-sm">
-                  Blog Educativo
-                </Link>
-              </li>
+              {asignaturas.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/clases-particulares/${a.slug}`}
+                    className="text-primary-200/80 hover:text-white transition-colors text-sm"
+                  >
+                    Clases de {a.nombre}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+        </div>
+
+        {/* Fila secundaria de enlaces */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <h4 className="text-lg font-semibold mb-6">La Academia</h4>
+          <ul className="flex flex-wrap gap-x-8 gap-y-3">
+            <li>
+              <Link href="/sobre-nosotros" className="text-primary-200/80 hover:text-white transition-colors text-sm">
+                Sobre Nosotros
+              </Link>
+            </li>
+            <li>
+              <Link href="/testimonios" className="text-primary-200/80 hover:text-white transition-colors text-sm">
+                Opiniones de Alumnos
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="text-primary-200/80 hover:text-white transition-colors text-sm">
+                Blog Educativo
+              </Link>
+            </li>
+            <li>
+              <Link href="/clases-particulares" className="text-primary-200/80 hover:text-white transition-colors text-sm">
+                Clases Particulares por Asignatura
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacto" className="text-primary-200/80 hover:text-white transition-colors text-sm">
+                Contacto y Cómo Llegar
+              </Link>
+            </li>
+          </ul>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

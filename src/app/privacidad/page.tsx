@@ -2,7 +2,7 @@ import { GraduationCap } from "lucide-react";
 
 export const metadata = {
   title: "Política de Privacidad | Academia Veritas",
-  description: "Política de privacidad de Academia Veritas. Información sobre el tratamiento de datos personales.",
+  description: "Política de privacidad de Academia Veritas (Úbeda): quién trata tus datos personales, con qué finalidad, durante cuánto tiempo y cómo ejercer tus derechos.",
 };
 
 export default function PrivacidadPage() {

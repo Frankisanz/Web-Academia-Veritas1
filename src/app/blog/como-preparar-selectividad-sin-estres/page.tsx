@@ -3,10 +3,12 @@ import { Clock, Calendar, ChevronLeft, GraduationCap, CheckCircle2 } from "lucid
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbSchema } from "@/components/seo/schema";
+import { ArticulosRelacionados } from "@/components/blog/articulos-relacionados";
 
 export const metadata: Metadata = {
-  title: "Cómo Preparar la Selectividad (PEvAU) sin Estrés en Úbeda | Academia Veritas",
-  description: "Guía definitiva para preparar la Selectividad (PEvAU) en Úbeda sin agobios. Técnicas de estudio, planificación y consejos de expertos para asegurar tu nota.",
+  title: "Preparar la Selectividad sin Estrés | Academia Veritas Úbeda",
+  description: "Guía para preparar la Selectividad (PEvAU) en Úbeda sin agobios. Técnicas de estudio, planificación y consejos de expertos para asegurar tu nota.",
   keywords: ["PEvAU Úbeda", "Selectividad Úbeda", "preparar selectividad sin estrés", "academia selectividad Úbeda", "técnicas de estudio PEvAU"],
   openGraph: {
     title: "Cómo Preparar la Selectividad (PEvAU) sin Estrés en Úbeda | Academia Veritas",
@@ -45,6 +47,12 @@ export default function PostSelectividad() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Blog", path: "/blog/" },
+          { name: "Preparar la Selectividad sin estrés", path: "/blog/como-preparar-selectividad-sin-estres/" },
+        ]}
       />
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
         {/* Navegación */}
@@ -167,6 +175,8 @@ export default function PostSelectividad() {
             {/* Redes sociales o compartir si fuera necesario */}
           </div>
         </footer>
+
+        <ArticulosRelacionados slugActual="como-preparar-selectividad-sin-estres" />
       </div>
     </div>
   );

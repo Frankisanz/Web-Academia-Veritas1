@@ -1,17 +1,26 @@
 import { Metadata } from "next";
+import { GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Cookies | Academia Veritas",
-  description: "Información detallada sobre el uso de cookies en nuestro sitio web.",
+  description: "Información detallada sobre el uso de cookies en la web de Academia Veritas: qué cookies usamos, para qué sirven y cómo puedes configurarlas o eliminarlas.",
 };
 
 export default function CookiesPage() {
   return (
-    <div className="pt-32 pb-24 min-h-screen">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-8">Política de Cookies</h1>
-        
-        <div className="prose prose-slate dark:prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
+    <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black">
+      <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 text-primary-700 font-semibold mb-4 text-sm">
+            <GraduationCap className="h-4 w-4" /> Academia Veritas
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
+            Política de Cookies
+          </h1>
+          <p className="text-muted-foreground">Última actualización: Mayo 2026</p>
+        </div>
+
+        <div className="prose prose-lg dark:prose-invert max-w-none space-y-6">
           <p>
             En <strong>Academia Veritas</strong>, utilizamos cookies y tecnologías similares para mejorar tu experiencia de navegación, analizar el tráfico de nuestro sitio y mostrarte contenido relevante.
           </p>
