@@ -78,19 +78,21 @@ export default function Home() {
 
       <Hero />
 
-      {/* Summer Banner */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-800 py-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 mix-blend-overlay"></div>
+      {/* Curso 2026/27 Banner */}
+      <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-14 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+        <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
         <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-block bg-white text-primary-700 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-4 animate-pulse shadow-lg">
+          <span className="inline-block bg-white text-primary-700 text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-4 animate-pulse shadow-lg">
             ¡Nuevo!
           </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-4">
-            ¡Se abren plazas para Refuerzo Intensivo de Verano!
+          <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+            ¡Se abren matrículas para el nuevo curso 2026/27!
           </h2>
-          <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8 font-medium">
-            Aprovecha el verano para ponerte al día o adelantar materia. Plazas disponibles
-            para las distintas materias de Primaria, Secundaria y Bachillerato.
+          <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+            Empieza con ventaja y asegura tu plaza. Grupos reducidos y atención personalizada
+            para Primaria, Secundaria, Bachillerato y preparación de Selectividad.
           </p>
           <Button
             size="lg"
