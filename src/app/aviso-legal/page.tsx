@@ -29,7 +29,7 @@ export default function AvisoLegalPage() {
               <li><strong className="text-foreground">Denominación:</strong> Academia Veritas</li>
               <li><strong className="text-foreground">Dirección:</strong> Calle Torrenueva Nº 1, 1º, 23400 Úbeda, Jaén</li>
               <li><strong className="text-foreground">Teléfono:</strong> 626 819 636</li>
-              <li><strong className="text-foreground">Email:</strong> soniahg41@gmail.com</li>
+              <li><strong className="text-foreground">Email:</strong> info.academiaveritas@gmail.com</li>
             </ul>
           </section>
 

@@ -17,7 +17,7 @@ export function Hero() {
     setFormLoading(true);
     setFormError(false);
     try {
-      const res = await fetch("https://formsubmit.co/ajax/soniahg41@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/info.academiaveritas@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({

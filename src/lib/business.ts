@@ -20,7 +20,7 @@ export const business = {
   /** Formato internacional E.164, requerido por schema.org y por el enlace tel: */
   phoneE164: "+34626819636",
   whatsapp: "34626819636",
-  email: "soniahg41@gmail.com",
+  email: "info.academiaveritas@gmail.com",
   /**
    * Coordenadas aproximadas de Calle Torrenueva (centro de Úbeda).
    * REVISAR: ajústalas al pin exacto de tu ficha de Google Business Profile.

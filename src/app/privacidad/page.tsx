@@ -25,7 +25,7 @@ export default function PrivacidadPage() {
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong className="text-foreground">Responsable:</strong> Academia Veritas</li>
               <li><strong className="text-foreground">Dirección:</strong> Calle Torrenueva Nº 1, 1º, 23400 Úbeda, Jaén</li>
-              <li><strong className="text-foreground">Email de contacto:</strong> soniahg41@gmail.com</li>
+              <li><strong className="text-foreground">Email de contacto:</strong> info.academiaveritas@gmail.com</li>
               <li><strong className="text-foreground">Teléfono:</strong> 626 819 636</li>
             </ul>
           </section>
@@ -67,7 +67,7 @@ export default function PrivacidadPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">6. Derechos del Interesado</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Los usuarios podrán ejercer los derechos de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición dirigiéndose al responsable del tratamiento a través del correo electrónico soniahg41@gmail.com. Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
+              Los usuarios podrán ejercer los derechos de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición dirigiéndose al responsable del tratamiento a través del correo electrónico info.academiaveritas@gmail.com. Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
             </p>
           </section>
 
