@@ -68,9 +68,19 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl relative z-10"
           >
-            <p className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-primary-100 text-primary-700 font-semibold text-sm px-4 py-1.5 rounded-full mb-6 shadow-sm">
-              <MapPin className="h-4 w-4" /> Úbeda (Jaén) · Calle Torrenueva
-            </p>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <p className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-primary-100 text-primary-700 font-semibold text-sm px-4 py-1.5 rounded-full shadow-sm">
+                <MapPin className="h-4 w-4" /> Úbeda (Jaén) · Calle Torrenueva
+              </p>
+              <Link
+                href="/#nuevo-grupo-lengua"
+                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-md shadow-primary-500/25 transition-all hover:scale-105"
+              >
+                <span className="h-2 w-2 rounded-full bg-amber-300 animate-ping" />
+                ¡Nuevo Grupo! Lengua 2º Bachillerato (Martes y Jueves)
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
 
             <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
               Clases Particulares y{" "}
@@ -207,6 +217,9 @@ export function Hero() {
                       >
                         <option value="" disabled>
                           Selecciona una opción
+                        </option>
+                        <option value="lengua-2-bachillerato">
+                          ¡Nuevo Grupo! Lengua y Literatura 2º Bachillerato (M y J)
                         </option>
                         <option value="primaria">Apoyo escolar de Primaria</option>
                         <option value="eso">Apoyo escolar de ESO</option>

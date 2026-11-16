@@ -8,6 +8,8 @@ import {
   CheckCircle2,
   MapPin,
   Phone,
+  Calendar,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/home/hero";
@@ -78,29 +80,120 @@ export default function Home() {
 
       <Hero />
 
-      {/* Curso 2026/27 Banner */}
-      <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-14 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none"></div>
-        <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
-        <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-block bg-white text-primary-700 text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-4 animate-pulse shadow-lg">
-            ¡Nuevo!
-          </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
-            ¡Se abren matrículas para el nuevo curso 2026/27!
-          </h2>
-          <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
-            Empieza con ventaja y asegura tu plaza. Grupos reducidos y atención personalizada
-            para Primaria, Secundaria, Bachillerato y preparación de Selectividad.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-800 shadow-xl border-none font-bold"
-            asChild
-          >
-            <Link href="/#contacto">Reserva tu plaza ahora</Link>
-          </Button>
+      {/* Novedad Destacada: Nuevo Grupo Lengua y Literatura 2º Bachillerato */}
+      <section
+        id="nuevo-grupo-lengua"
+        className="bg-gradient-to-br from-primary-700 via-primary-800 to-primary-950 py-16 md:py-20 relative overflow-hidden border-y border-primary-500/30"
+      >
+        {/* Elementos decorativos de fondo inspirados en la temática de la web y el cartel */}
+        <div className="absolute -left-16 -top-16 w-72 h-72 rounded-full bg-primary-400/20 blur-3xl pointer-events-none" />
+        <div className="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-primary-300/15 blur-3xl pointer-events-none" />
+        <BookOpen className="hidden lg:block absolute left-8 bottom-10 h-44 w-44 text-white/5 -rotate-12 pointer-events-none" />
+        <BookOpen className="hidden lg:block absolute right-8 bottom-10 h-44 w-44 text-white/5 rotate-12 pointer-events-none" />
+
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl text-center">
+            {/* Badges superiores */}
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+              <span className="inline-flex items-center gap-1.5 bg-amber-400 text-primary-950 text-xs sm:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg animate-pulse">
+                <Sparkles className="h-4 w-4" /> ¡¡Se abre nuevo grupo!!
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-white text-primary-800 text-xs sm:text-sm font-extrabold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                ¡Inscripción Abierta!
+              </span>
+            </div>
+
+            {/* Título principal */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-8">
+              Lengua y Literatura{" "}
+              <span className="block sm:inline text-amber-300">2º Bachillerato</span>
+            </h2>
+
+            {/* Bloque central: Preparación de Selectividad */}
+            <div className="bg-primary-600/70 backdrop-blur-md border border-primary-300/30 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto mb-8 shadow-xl text-left">
+              <div className="flex items-center justify-center gap-2 mb-5 pb-3 border-b border-white/15">
+                <GraduationCap className="h-6 w-6 text-amber-300 shrink-0" />
+                <h3 className="text-lg sm:text-2xl font-extrabold text-white uppercase tracking-wide text-center">
+                  Preparación de Selectividad
+                </h3>
+              </div>
+
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3.5">
+                  <div className="bg-white/15 p-1.5 rounded-full shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-5 w-5 text-amber-300" />
+                  </div>
+                  <span className="text-white text-base sm:text-lg font-semibold leading-snug">
+                    Profundización en Comentario de Texto y Análisis Sintáctico
+                  </span>
+                </li>
+                <li className="flex items-start gap-3.5">
+                  <div className="bg-white/15 p-1.5 rounded-full shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-5 w-5 text-amber-300" />
+                  </div>
+                  <span className="text-white text-base sm:text-lg font-semibold leading-snug">
+                    Enfoque práctico y simulacros de examen
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Píldora de Horario */}
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-3 bg-primary-950/90 border-2 border-primary-300/40 text-white px-6 py-3 rounded-2xl shadow-lg">
+                <Calendar className="h-5 w-5 text-amber-300 shrink-0" />
+                <span className="text-base sm:text-xl font-extrabold tracking-wide">
+                  HORARIO: <span className="text-amber-300">Martes y Jueves</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Botones de acción (CTA) */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-white text-primary-800 hover:bg-amber-300 hover:text-primary-950 shadow-xl border-none font-extrabold text-base h-14 px-8 rounded-full transition-all"
+                asChild
+              >
+                <Link href="/#contacto">
+                  Reservar mi plaza ahora <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-2 border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white font-bold text-base h-14 px-8 rounded-full backdrop-blur-sm"
+                asChild
+              >
+                <a href={`tel:${business.phoneE164}`}>
+                  <Phone className="mr-2 h-5 w-5" /> Llamar al {business.phone}
+                </a>
+              </Button>
+            </div>
+
+            {/* Barra inferior de datos (como en el cartel) */}
+            <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-bold text-primary-100">
+              <a
+                href={`tel:${business.phoneE164}`}
+                className="inline-flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Phone className="h-4 w-4 text-amber-300 shrink-0" />
+                {business.phone}
+              </a>
+              <span className="hidden sm:inline text-white/30">•</span>
+              <Link
+                href="/clases-particulares/lengua-y-literatura"
+                className="inline-flex items-center gap-1.5 hover:text-amber-300 transition-colors underline underline-offset-4"
+              >
+                Ver programa de Lengua y Literatura
+              </Link>
+              <span className="hidden sm:inline text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-amber-300 shrink-0" />
+                Calle Torrenueva, 1, 1º Planta, Úbeda (Jaén)
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -168,9 +261,16 @@ export default function Home() {
                 href={`/clases-particulares/${a.slug}`}
                 className="group flex items-center justify-between gap-4 bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-primary-100 dark:border-zinc-800 hover:border-primary-300 hover:shadow-md transition-all"
               >
-                <span className="font-semibold text-foreground">
-                  Clases de {a.nombre}
-                </span>
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <span className="font-semibold text-foreground">
+                    Clases de {a.nombre}
+                  </span>
+                  {a.slug === "lengua-y-literatura" && (
+                    <span className="bg-primary-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full animate-pulse">
+                      ¡Nuevo Grupo!
+                    </span>
+                  )}
+                </div>
                 <ArrowRight className="h-4 w-4 text-primary-500 group-hover:translate-x-1 transition-transform shrink-0" />
               </Link>
             ))}
